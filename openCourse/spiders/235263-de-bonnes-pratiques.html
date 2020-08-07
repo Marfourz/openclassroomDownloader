@@ -1,0 +1,1095 @@
+
+<!DOCTYPE html>
+<html class="no-js " lang="fr" prefix="og: http://ogp.me/ns#">
+<head>
+<title>
+                            De bonnes pratiques - Apprenez à programmer en Python - OpenClassrooms
+                    </title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"90dc06697a",applicationID:"20302107"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="235263-de-bonnes-pratiqueshttps://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1173.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="application-name" content="OpenClassrooms" />
+<meta name="msapplication-TileColor" content="#7451eb" />
+<meta name="msapplication-TileImage" content="/fav-icon.png?v=3" />
+<meta name="theme-color" content="#7451eb">
+<meta property="og:locale" content="fr" />
+<link rel="icon" sizes="144x144" href="235263-de-bonnes-pratiques/fav-icon.png?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3.html" />
+<link rel="apple-touch-icon" href="apple-touch-icon-iphone.png?v=3.html" />
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png?v=3.html" />
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone-retina-display.png?v=3.html" />
+<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-ipad-retina-display.png?v=3.html" />
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png?v=3.html" />
+<link rel="shortcut icon" href="235263-de-bonnes-pratiques/favicon.ico?4a234d5" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+          window.dataLayer = window.dataLayer || [];
+
+          (function(a,s,y,n,c,h,i,d,e){
+            var isEnabled = [
+              /\/paths/,
+              /\/apprenticeship/,
+              /\/employer/,
+            ].reduce(function (acc, pathReg) {
+                var matchUrl = !!document.location.pathname.match(pathReg);
+                return acc || matchUrl;
+            }, false);
+
+            if (!isEnabled) {
+              return;
+            }
+
+            s.className+=' '+y;
+            h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+            (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+          })(window,document.documentElement,'async-hide','dataLayer',2000,{'GTM-5WM9PV':true});
+        </script>
+<link href="235263-de-bonnes-pratiques/bundles/common/css/master-30373b45.css" type="text/css" rel="stylesheet" media="all" />
+<link href="235263-de-bonnes-pratiques/bundles/course/css/main-e895f7b3.css" type="text/css" rel="stylesheet" media="all" />
+<link href="235263-de-bonnes-pratiqueshttps://vjs.zencdn.net/6.2.5/video-js.css" rel="stylesheet">
+<script>
+    /*! modernizr 3.3.1 (Custom Build) | MIT *
+    * https://modernizr.com/download/?-cssfilters-touchevents-setclasses !*/
+    !function(e,n,t){function o(e,n){return typeof e===n}function r(){var e,n,t,r,s,i,a;for(var l in C)if(C.hasOwnProperty(l)){if(e=[],n=C[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(r=o(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],a=i.split("."),1===a.length?Modernizr[a[0]]=r:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=r),g.push((r?"":"no-")+a.join("-"))}}function s(e){var n=w.className,t=Modernizr._config.classPrefix||"";if(x&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(o,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),x?w.className.baseVal=n:w.className=n)}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):x?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function a(){var e=n.body;return e||(e=i(x?"svg":"body"),e.fake=!0),e}function l(e,t,o,r){var s,l,u,f,p="modernizr",c=i("div"),d=a();if(parseInt(o,10))for(;o--;)u=i("div"),u.id=r?r[o]:p+(o+1),c.appendChild(u);return s=i("style"),s.type="text/css",s.id="s"+p,(d.fake?d:c).appendChild(s),d.appendChild(c),s.styleSheet?s.styleSheet.cssText=e:s.appendChild(n.createTextNode(e)),c.id=p,d.fake&&(d.style.background="",d.style.overflow="hidden",f=w.style.overflow,w.style.overflow="hidden",w.appendChild(d)),l=t(c,e),d.fake?(d.parentNode.removeChild(d),w.style.overflow=f,w.offsetHeight):c.parentNode.removeChild(c),!!l}function u(e,n){return!!~(""+e).indexOf(n)}function f(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function p(e,n){return function(){return e.apply(n,arguments)}}function c(e,n,t){var r;for(var s in e)if(e[s]in n)return t===!1?e[s]:(r=n[e[s]],o(r,"function")?p(r,t||n):r);return!1}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function m(n,o){var r=n.length;if("CSS"in e&&"supports"in e.CSS){for(;r--;)if(e.CSS.supports(d(n[r]),o))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];r--;)s.push("("+d(n[r])+":"+o+")");return s=s.join(" or "),l("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==getComputedStyle(e,null).position})}return t}function h(e,n,r,s){function a(){p&&(delete k.style,delete k.modElem)}if(s=o(s,"undefined")?!1:s,!o(r,"undefined")){var l=m(e,r);if(!o(l,"undefined"))return l}for(var p,c,d,h,v,y=["modernizr","tspan","samp"];!k.style&&y.length;)p=!0,k.modElem=i(y.shift()),k.style=k.modElem.style;for(d=e.length,c=0;d>c;c++)if(h=e[c],v=k.style[h],u(h,"-")&&(h=f(h)),k.style[h]!==t){if(s||o(r,"undefined"))return a(),"pfx"==n?h:!0;try{k.style[h]=r}catch(g){}if(k.style[h]!=v)return a(),"pfx"==n?h:!0}return a(),!1}function v(e,n,t,r,s){var i=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+j.join(i+" ")+i).split(" ");return o(n,"string")||o(n,"undefined")?h(a,n,r,s):(a=(e+" "+E.join(i+" ")+i).split(" "),c(a,n,t))}function y(e,n,o){return v(e,t,t,n,o)}var g=[],C=[],S={_version:"3.3.1",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){C.push({name:e,fn:n,options:t})},addAsyncTest:function(e){C.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=S,Modernizr=new Modernizr;var w=n.documentElement,x="svg"===w.nodeName.toLowerCase(),_=S._config.usePrefixes?" -webkit- -moz- -o- -ms- ".split(" "):["",""];S._prefixes=_;var b="CSS"in e&&"supports"in e.CSS,T="supportsCSS"in e;Modernizr.addTest("supports",b||T);var z=S.testStyles=l;Modernizr.addTest("touchevents",function(){var t;if("ontouchstart"in e||e.DocumentTouch&&n instanceof DocumentTouch)t=!0;else{var o=["@media (",_.join("touch-enabled),("),"heartz",")","{#modernizr{top:9px;position:absolute}}"].join("");z(o,function(e){t=9===e.offsetTop})}return t});var P="Moz O ms Webkit",j=S._config.usePrefixes?P.split(" "):[];S._cssomPrefixes=j;var E=S._config.usePrefixes?P.toLowerCase().split(" "):[];S._domPrefixes=E;var N={elem:i("modernizr")};Modernizr._q.push(function(){delete N.elem});var k={style:N.elem.style};Modernizr._q.unshift(function(){delete k.style}),S.testAllProps=v,S.testAllProps=y,Modernizr.addTest("cssfilters",function(){if(Modernizr.supports)return y("filter","blur(2px)");var e=i("a");return e.style.cssText=_.join("filter:blur(2px); "),!!e.style.length&&(n.documentMode===t||n.documentMode>9)}),r(),s(g),delete S.addTest,delete S.addAsyncTest;for(var A=0;A<Modernizr._q.length;A++)Modernizr._q[A]();e.Modernizr=Modernizr}(window,document);
+    </script>
+<script type="text/javascript">
+    var App = {
+        startTime: (new Date()).getTime(),
+        pageGenerationDate: 1596805552000
+    };
+
+    App.user = {
+                    locale: 'fr',
+            language: 'fr',
+            country: 'BJ',
+            isPremium: false,
+            isMentor: false,
+            anonymous: true
+            };
+
+    App.preferences = {
+        debug: false,
+        assetVersion: '4a234d5',
+        contactMail: 'hello\u0040openclassrooms.com',
+        contactPhone: '\u002B33\u00201\u002080\u002088\u002080\u002030',
+        phoneNumbersByCountry: {"uk":{"contact":"+44 16 1768 1880"},"ca":{"contact":"+1 929-376-0101"},"us":{"contact":"+1 929-376-0101"},"fr":{"contact":"+33 1 80 88 80 30","b2b_contact":"+33 1 80 88 80 40"},"es":{"contact":"+33 1 80 88 80 30"}},
+        adyenPublicKey: '10001\u007C889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+        cdnImage: true,
+        layer: {
+            appId: 'layer\u003A\/\/\/apps\/staging\/7757c53a\u002Db2ba\u002D11e5\u002Db2a6\u002D2584730b1501',
+            identityProviderUrl: '\/ajax\/conversations\/get\u002Didentity\u002Dtoken'
+        },
+        algolia: {
+            appId: 'JGRXRFVQM0',
+            apiKey: 'cd1e2696005d97e99dc7b882297b09cf',
+            indexName: 'prod_v2_COURSES_fr'
+        },
+        google: {
+            appId: '132418960718\u002Djdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com',
+            maps: {
+                apiKey: 'AIzaSyDQKLz54HFMtUf9Yo8cWkgR8Af3eU2HAiE'
+            },
+        },
+        application: {
+            form: {
+              funnelUrl: 'https\u003A\/\/www.tfaforms.com\/responses\/processor',
+              fields: {"firstname":"tfa_6","lastname":"tfa_4","email":"tfa_2","path_id":"tfa_138","source_name":"tfa_165","consent":"tfa_150","user_locale":"tfa_125","userId":"tfa_3","gender":"tfa_10","user_study_motivation":"tfa_171","diploma_level":"tfa_30","user_diploma":"tfa_173","language_proficiency_fr":"tfa_40","language_proficiency_en":"tfa_42","ha_addressline_1":"tfa_16","ha_city":"tfa_18","ha_zip_code":"tfa_24","ha_state":"tfa_163","ha_country":"tfa_22","professional_status":"tfa_94","public_employment_agency_id":"tfa_159","user_public_employment_agency_certificate":"tfa_167","user_pe_advisor_email":"tfa_199","disabled_worker":"tfa_67","veteran":"tfa_73","athlete":"tfa_79","refugee":"tfa_85","rsa":"tfa_91","are":"tfa_175","api":"tfa_177","cui":"tfa_179","can_work_in_france":"tfa_142","user_resume":"tfa_1","online_cv":"tfa_157","user_has_mobility":"tfa_193","user_mobility_departamental":"tfa_187","user_mobility_national":"tfa_189","user_mobility_regional":"tfa_191","user_mobility_cities":"tfa_195","work_location_1":"tfa_128","work_location_2":"tfa_130","work_location_3":"tfa_132","work_location_4":"tfa_134","work_location_5":"tfa_136","career_motivation":"tfa_123","has_computer":"tfa_43","has_mic":"tfa_49","has_webcam":"tfa_169","has_fast_internet_connection":"tfa_55","has_quiet_space":"tfa_61","has_online_courses_xp":"tfa_118","has_online_courses_xp_text":"tfa_121","found_a_company":"tfa_146","date_of_birth":"tfa_9","phone_number":"tfa_126","user_desired_start_date":"tfa_161","tfa_dbFormId":"tfa_dbFormId","tfa_dbControl":"tfa_dbControl"}
+            },
+        },
+        facebook: {
+            appId: '277769842283905',
+        },
+        apple: {
+          appId: 'com.openclassrooms.apple\u002Dsign\u002Din',
+        },
+        routes: {
+            COURSE_EVENT: '/components/courses/:courseId',
+            COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+            ACCEPT_COOKIE: '\/ajax\/components\/user\u002Daccept\u002Dconsent\u002Dcookie'
+        },
+
+                    };
+
+    App.preferences.navigationPreference = {
+            };
+
+    App.preferences.modules = {
+        'smiley': {
+            basePath: '/bundles/common/images/smiley/'
+        }
+    };
+
+    try {
+        App.api = JSON.parse("\u007B\u0022anonymous\u0022\u003A\u007B\u0022client_id\u0022\u003A\u0022807605274673228623802113\u0022,\u0022client_secret\u0022\u003A\u00221\u0022\u007D,\u0022logged\u0022\u003A\u007B\u0022client_id\u0022\u003A\u00227xPFDY3bB3ruX44z\u0022\u007D,\u0022urls\u0022\u003A\u007B\u0022authorize\u0022\u003A\u0022https\u003A\\\/\\\/openclassrooms.com\\\/oauth2\\\/authorize\u0022,\u0022root\u0022\u003A\u0022https\u003A\\\/\\\/api.openclassrooms.com\u0022,\u0022proxy\u0022\u003A\u0022\u0022\u007D\u007D");
+    } catch (e) {
+        App.api = {};
+    }
+
+    App.notifications = {};
+    App.scripts = [];
+
+    if (App.user.id) {
+        (function(){
+            var userData = { userId: App.user.id };
+
+            if (App.user.premiumType) {
+                userData.status = (App.user.premiumType === 'Premium Solo') ? 'premium solo student' : 'path student';
+            } else {
+                userData.status = 'free student';
+            }
+
+            if (App.user.isMentor) {
+                userData.status = App.user.premiumType ? (userData.status + '|mentor') : 'mentor';
+            }
+
+            if (!window.dataLayer) {
+              return;
+            }
+            window.dataLayer.push(userData);
+        })();
+    }
+</script>
+<script>    
+    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":235263,"partTitle":"De bonnes pratiques","partSlug":"de-bonnes-pratiques","courseId":235344,"courseTitle":"Apprenez \u00e0 programmer en Python","courseSlug":"apprenez-a-programmer-en-python","courseLanguage":"fr","isIntroduction":false,"isCertifying":true};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="De bonnes pratiques" />
+<meta property="og:url" content="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/235263-de-bonnes-pratiques" />
+<meta property="og:site_name" content="OpenClassrooms" />
+<meta property="og:image" content="https://course.oc-static.com/courses/0/235344.png" />
+<meta property="og:description" content="Python est un langage de programmation qui se veut simple, concis et lisible. On l&#039;utilise aussi bien pour créer des scripts que des programmes ou des sites web. Il est très populaire, notamment chez Google." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@OCFrance" />
+<meta name="twitter:title" content="De bonnes pratiques" />
+<meta name="twitter:image" content="https://course.oc-static.com/courses/0/235344.png" />
+<meta name="twitter:description" content="Python est un langage de programmation qui se veut simple, concis et lisible. On l&#039;utilise aussi bien pour créer des scripts que des programmes ou des sites web. Il est très populaire, notamment chez Google." />
+<link rel="canonical" href="235263-de-bonnes-pratiques.html" />
+</head>
+<body class="course oc-body   breadcrumbFluid breadcrumbOnContrasted">
+<ul class="skipLink">
+<li>
+<a class="skipLink__item" href="#mainContent.html">Aller au contenu</a>
+</li>
+<li>
+<a class="skipLink__item" href="#footerChangeLanguage.html">Choisir la langue</a>
+</li>
+<li id="skipLink_search">
+<a class="skipLink__item" href="#algolia-search-input.html">Aller à la recherche</a>
+</li>
+</ul>
+<script id="_EVENTS-IDENTIFY" type="application/json">
+        </script>
+<script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page","integrations":{"Blueshift":false,"HubSpot":false},"properties":{"pageCategory":"courses","courseTitle":"Apprenez \u00e0 programmer en Python"}}
+    </script>
+<div id="predictiveCrmTopBanner"></div>
+<script id="fundingMechanisms" type="application/json">
+    {
+        "fundingMechanisms": []
+    }
+</script>
+<div id="oc-header">
+<div class="oc-mainHeader oc-mainHeader--notLogged oc-mainHeader--skeleton">
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div style="display: flex;">
+<div class="oc-mainHeaderLogo oc-mainHeaderLogo--skeleton">
+<a href="fr.html" class="oc-mainHeaderLogo__link">
+<svg fill="none" height="51" width="668" viewBox="0 0 668 51" xmlns="http://www.w3.org/2000/svg">
+<title>OpenClassrooms.com</title>
+<path d="M406.011 35.018c0 2.82-.71 5.641-2.368 7.991-1.659 2.35-3.79 4.23-6.87 5.64-3.079 1.41-6.869 2.116-11.37 2.116-3.79 0-7.343-.47-10.897-1.41-3.553-.94-6.395-2.35-8.527-3.996l7.106-8.46c1.421.705 2.843 1.175 4.501 1.88 2.842.94 5.448 1.41 8.054 1.41 4.974 0 7.58-1.41 7.58-3.995 0-1.41-.711-2.35-2.132-3.056-1.421-.705-3.79-1.41-6.87-2.115-3.553-.705-6.395-1.645-8.764-2.585s-4.264-2.35-6.159-4.23c-1.658-1.88-2.606-4.701-2.606-7.991 0-3.056.711-5.641 2.369-7.991 1.658-2.35 3.79-4.23 6.87-5.64 3.079-1.41 6.869-2.116 11.37-2.116 3.079 0 6.159.47 9.001 1.175 3.08.705 5.685 1.88 7.817 3.055l-7.343 8.696c-3.316-1.41-6.633-2.115-9.712-2.115-2.606 0-4.501.47-5.685 1.175-1.185.705-1.895 1.88-1.895 3.056 0 1.41.711 2.35 2.132 2.82 1.421.705 3.79 1.41 6.869 2.115a49.4 49.4 0 0 1 8.765 2.585c2.369.94 4.264 2.35 6.159 4.23 1.658 1.646 2.605 4.466 2.605 7.756zm261.989 0c0 2.82-.711 5.641-2.369 7.991s-3.79 4.23-6.869 5.64c-3.08 1.41-6.87 2.116-11.371 2.116-3.79 0-7.343-.47-10.896-1.41s-6.396-2.35-8.528-3.996l7.107-8.46c1.421.705 2.842 1.175 4.501 1.88 2.842.94 5.448 1.41 8.053 1.41 4.975 0 7.581-1.41 7.581-3.995 0-1.41-.711-2.35-2.132-3.056-1.422-.705-3.791-1.41-6.87-2.115a49.361 49.361 0 0 1-8.764-2.585c-2.369-.94-4.264-2.35-6.159-4.23-1.658-1.88-2.606-4.701-2.606-7.991 0-3.056.711-5.641 2.369-7.991 1.658-2.35 3.79-4.23 6.869-5.64 3.08-1.41 6.87-2.116 11.371-2.116 3.079 0 6.158.47 9.001 1.175 3.079.705 5.685 1.88 7.817 3.055l-7.343 8.696c-3.317-1.41-6.633-2.115-9.712-2.115-2.606 0-4.501.47-5.685 1.175-1.185.705-1.896 1.88-1.896 3.056 0 1.41.711 2.35 2.132 2.82 1.422.705 3.791 1.41 6.87 2.115a49.361 49.361 0 0 1 8.764 2.585c2.369.94 4.264 2.35 6.159 4.23 1.895 1.646 2.606 4.466 2.606 7.756zM87.882 19.037c0 3.76-.947 6.816-2.605 9.4-1.659 2.586-4.027 4.701-7.107 6.111s-6.87 2.116-10.896 2.116H59.22v12.69H45.955V.706h21.319c4.264 0 7.817.705 10.896 2.115 3.08 1.41 5.448 3.526 7.107 6.346 1.895 3.055 2.605 6.346 2.605 9.87zm-13.265 0c0-2.35-.71-3.995-2.132-5.17s-3.316-1.88-6.159-1.88h-7.343v14.336h7.343c2.606 0 4.738-.706 6.16-1.88s2.131-3.056 2.131-5.406zm55.904 20.212v10.576h-37.19V1.175h36.242v10.576h-23.214v8.226h18.476v10.341h-18.476v8.93zm50.218-38.074v48.65h-10.896l-20.609-25.853v25.853h-13.028V1.175h10.896l20.609 25.853V1.175zm84.092 37.604v10.81h-32.926V.94h13.265v37.604h19.661zm56.851 11.046h-13.739l-3.553-9.401h-19.661l-3.553 9.4h-13.502l20.608-48.649h13.029zM300.6 30.083l-5.922-15.512-5.922 15.512zm62.536 4.935c0 2.82-.71 5.641-2.369 7.991-1.658 2.35-3.79 4.23-6.869 5.64-3.08 1.41-6.87 2.116-11.37 2.116-3.79 0-7.344-.47-10.897-1.41s-6.396-2.35-8.527-3.996l7.106-8.46c1.421.705 2.842 1.175 4.501 1.88 2.842.94 5.448 1.41 8.054 1.41 4.974 0 7.58-1.41 7.58-3.995 0-1.41-.711-2.35-2.132-3.056-1.421-.705-3.79-1.41-6.87-2.115-3.553-.705-6.395-1.645-8.764-2.585s-4.264-2.35-6.159-4.23c-1.658-1.88-2.606-4.701-2.606-7.991 0-3.056.711-5.641 2.369-7.991 1.658-2.35 3.79-4.23 6.87-5.64 3.079-1.41 6.869-2.116 11.37-2.116 3.079 0 6.159.47 9.001 1.175 3.08.705 5.448 1.88 7.817 3.055l-7.343 8.696c-3.316-1.41-6.633-2.115-9.712-2.115-2.606 0-4.501.47-5.685 1.175-1.185.705-1.895 1.88-1.895 3.056 0 1.41.71 2.35 2.132 2.82 1.421.705 3.79 1.41 6.869 2.115a49.4 49.4 0 0 1 8.765 2.585c2.368.94 4.263 2.35 6.158 4.23 1.659 1.646 2.606 4.466 2.606 7.756zm-322.63-9.636c0 13.867-11.37 25.383-25.583 25.383-5.685 0-10.66-1.88-14.923-4.936l8.528-10.105c1.895 1.175 4.027 1.88 6.395 1.88 6.633 0 12.081-5.406 12.081-11.986 0-6.581-5.448-11.987-12.08-11.987-2.37 0-4.501.705-6.396 1.88L0 5.407C4.264 2.35 9.475.47 14.923.47 29.136.235 40.506 11.516 40.506 25.383zm177.66 10.341l8.528 10.107c-4.264 3.055-9.476 4.935-14.924 4.935-13.976 0-25.583-11.281-25.583-25.383C186.187 11.517 197.557 0 211.77 0c5.685 0 10.66 1.88 14.924 4.936l-8.528 10.105c-1.895-1.175-4.027-1.88-6.396-1.88-6.632 0-12.081 5.406-12.081 11.986 0 6.581 5.449 11.987 12.081 11.987 2.369.47 4.501-.235 6.396-1.41zm236.169 14.102l-10.423-15.042c3.079-1.41 5.211-3.525 6.87-6.11 1.658-2.585 2.605-5.876 2.605-9.401 0-3.76-.947-6.816-2.605-9.636-1.659-2.82-4.027-4.7-7.107-6.346-3.079-1.41-6.869-2.115-10.896-2.115H411.46v48.65h13.028V37.134h6.159l8.764 12.69zm-29.847-37.839h7.58c2.606 0 4.738.705 6.159 1.88s2.132 3.056 2.132 5.17c0 2.351-.711 3.996-2.132 5.171s-3.316 1.88-6.159 1.88h-7.58zM483.945.235c13.976 0 25.583 11.281 25.583 25.382S498.157 51 483.945 51c-13.976 0-25.583-11.281-25.583-25.383S469.732.235 483.945.235zm-13.029 25.147c0 7.051 5.685 12.692 12.792 12.692 7.106 0 12.791-5.64 12.791-12.692s-5.685-12.69-12.791-12.69c-6.87 0-12.792 5.64-12.792 12.69zM538.901.235c13.976 0 25.583 11.281 25.583 25.382S553.114 51 538.901 51c-13.976 0-25.583-11.281-25.583-25.383S524.925.235 538.901.235zm-12.792 25.147c0 7.051 5.685 12.692 12.792 12.692 7.106 0 12.791-5.64 12.791-12.692s-5.685-12.69-12.791-12.69c-7.107 0-12.792 5.64-12.792 12.69zm70.353 6.816L580.828 1.175h-10.896v48.65h11.607V28.438l11.607 21.387h6.87l11.607-21.387v21.387h11.607V1.175h-10.897z" />
+</svg>
+</a>
+</div>
+<nav class="oc-mainHeader__navWrapper" role="navigation" aria-label="Menu principal">
+<div class="oc-mainHeader__linksWrapper">
+<div class="oc-mainHeader__navLinkWrapper"><a class="oc-mainHeader__navLink" data-event="click|Header|Paths" href="paths.html">Parcours</a></div>
+<div class="oc-mainHeader__navLinkWrapper"><a class="oc-mainHeader__navLink" data-event="click|Header|Courses" href="courses.html">Cours</a></div>
+<div class="oc-mainHeader__navLinkWrapper--separator"></div>
+<div class="oc-mainHeader__navLinkWrapper"><a class="oc-mainHeader__navLink" data-event="click|Header|Business" href="business.html">Business</a></div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--[if lt IE 10]>
+<div class="alertMessage">
+    <span class="bullet bullet--small bullet--orange alertMessage__icon"> <i class="icon-exclamation"></i></span>
+    <p class="alertMessage__text">
+        Vous utilisez un navigateur obsolète, veuillez le <a href="update.html.html">mettre à jour</a>.
+    </p>
+</div>
+<![endif]-->
+
+<div id="ie-ten-disclaimer" class="alertMessage" style="display:none">
+<span class="bullet bullet--small bullet--orange alertMessage__icon"> <i class="icon-exclamation"></i></span>
+<p class="alertMessage__text">
+Vous utilisez un navigateur obsolète, veuillez le <a href="update.html.html">mettre à jour</a>.
+</p>
+</div>
+<script>
+  if (document.documentMode === 10) {
+    document.getElementById('ie-ten-disclaimer').style.display = 'block';
+  }
+</script>
+
+<noscript>
+    <div class="alertMessage">
+        <span class="bullet bullet--small bullet--orange alertMessage__icon"> <i class="icon-exclamation"></i></span>
+        <p class="alertMessage__text">
+            Veuillez utiliser un <a href="update.html.html">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+        </p>
+    </div>
+</noscript>
+<div id="mainContentWithHeader">
+<section class="breadcrumb  inset no-padding">
+<div class="grid-wrapper">
+<div class="grid-inner">
+<nav class="breadcrumb__wrapper" role="navigation" aria-label="Fil d&#039;Ariane">
+<ul class="breadcrumb__trail">
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a class="breadcrumb__link" href=".html" itemprop="url">
+<span itemprop="title">Accueil</span
+                                    ></a>
+<span class="breadcrumb__separator"> > </span>
+</li>
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a class="breadcrumb__link" href="courses.html" itemprop="url">
+<span itemprop="title">Cours</span
+                                    ></a>
+<span class="breadcrumb__separator"> > </span>
+</li>
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a class="breadcrumb__link" href="235344-apprenez-a-programmer-en-python?status=published.html" itemprop="url">
+<span itemprop="title">Apprenez à programmer en Python</span
+                                    ></a>
+<span class="breadcrumb__separator"> > </span>
+</li>
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+De bonnes pratiques
+</li>
+ </ul>
+</nav>
+</div>
+</div>
+</section>
+<div id="pre-main-part">
+</div>
+<main class="claire clearfix" role="main" id="mainContent">
+<article itemscope itemtype="http://schema.org/Article" lang="fr">
+<header id="course-header" class="courseHeader" xmlns="http://www.w3.org/1999/html">
+<div class="grid-wrapper"><div class="grid-inner"><div class="grid-inner-content"><div class="courseHeader__topPart"><a itemprop="url" href="/fr/courses/235344-apprenez-a-programmer-en-python"><h1 class="oc-typography-h2 typoColorOnContrastedBg  courseHeader__title" data-course-title="Apprenez à programmer en Python">Apprenez à programmer en Python</h1></a></div></div></div></div><div class="grid-wrapper"><div class="grid-inner"><div class="grid-inner-content"><div class="courseHeader__bottomPart"><div class="courseHeader__details"><div class="courseHeader__detailsGroup"><ul class="courseHeader__detailsList"><li class="courseHeader__detailsItem"><img class="courseHeader__icon js-tooltip" src="/images/icons/schedule.svg?4a234d5" width="16" title="Ce cours demande en moyenne 40 heures de travail pour être réussi." /><span class="courseHeader__label">40 heures</span></li><li class="courseHeader__detailsItem"><i class="icon-level courseHeader__icon"></i><span class="courseHeader__label">Difficile</span></li></ul></div><div class="courseHeader__detailsGroup courseHeader--license"><a class="courseHeader__license" target="_blank" href="2.0.html"><span class="courseHeader__label">Licence</span><ul class="courseHeader__detailsList"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccnc iconBar__icon" title="NC"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+<div id="popin-formats-availables" class="popin popin--course-formats-availables">
+<i class="popin__close-button icon-close js-close-button"></i>
+<div class="course-types course-types--withSpace">
+<a class="course-types__item" href="235344-apprenez-a-programmer-en-python.html">
+<i class="icon-desktop course-types__icon"></i>
+</a>
+<a class="course-types__item" href="apprenez-a-programmer-en-python-9791090085770?societe=openclassrooms.html">
+<i class="icon-book course-types__icon"></i>
+</a>
+<a class="course-types__item" href="certificate_example.html" target="_blank">
+<i class="icon-badge course-types__icon js-close-button"></i>
+</a>
+</div>
+<p>Ce cours est visible <a href="235344-apprenez-a-programmer-en-python.html">gratuitement en ligne</a>.</p>
+<p>
+Ce cours existe en livre papier.
+</p>
+<p>
+course.header.alt.is_certifying
+</p>
+<a class="button button--primary js-close-button" href="#.html">J&#039;ai tout compris !</a>
+</div>
+</header>
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content">
+<p class="courseHeader__updatedTime">
+Mis à jour le 23/06/2020 </p>
+</div>
+</div>
+</div>
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content">
+<nav id="course-timeline" class="timeline">
+<div class="timeline__inner">
+<span class="timeline__iconContainer">
+<a href="235344-apprenez-a-programmer-en-python.html" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+<i class="icon-home roundIcon__icon"></i>
+</a>
+</span>
+<div class="timeline__steps">
+<span class="timeline__splitChapter"></span>
+<a href="230659-decouvrez-python.html" class="timeline__step" title="Découvrez Python">
+<span class="timeline__stepName">
+Découvrez Python
+</span>
+</a>
+<a href="230722-faites-vos-premiers-pas-avec-linterpreteur-de-commandes-python.html" class="timeline__step" title="Faites vos premiers pas avec l&#039;interpréteur de commandes Python">
+<span class="timeline__stepName">
+Faites vos premiers pas avec l&#039;interpréteur de commandes Python
+</span>
+</a>
+<a href="230957-entrez-dans-le-monde-merveilleux-des-variables.html" class="timeline__step" title="Entrez dans le monde merveilleux des variables">
+<span class="timeline__stepName">
+Entrez dans le monde merveilleux des variables
+</span>
+</a>
+<a href="231174-creez-des-structures-conditionnelles.html" class="timeline__step" title="Créez des structures conditionnelles">
+<span class="timeline__stepName">
+Créez des structures conditionnelles
+</span>
+</a>
+<a href="231260-apprenez-a-faire-des-boucles.html" class="timeline__step" title="Apprenez à faire des boucles">
+<span class="timeline__stepName">
+Apprenez à faire des boucles
+</span>
+</a>
+<a href="231442-avancez-pas-a-pas-vers-la-modularite-1-2.html" class="timeline__step" title="Avancez pas à pas vers la modularité (1/2)">
+<span class="timeline__stepName">
+Avancez pas à pas vers la modularité (1/2)
+</span>
+</a>
+<a href="231571-avancez-pas-a-pas-vers-la-modularite-2-2.html" class="timeline__step" title="Avancez pas à pas vers la modularité (2/2)">
+<span class="timeline__stepName">
+Avancez pas à pas vers la modularité (2/2)
+</span>
+</a>
+<a href="231688-gerez-les-exceptions.html" class="timeline__step" title="Gérez les exceptions">
+<span class="timeline__stepName">
+Gérez les exceptions
+</span>
+</a>
+<a href="231735-tp-tous-au-zcasino.html" class="timeline__step" title="TP : tous au ZCasino">
+<span class="timeline__stepName">
+TP : tous au ZCasino
+</span>
+</a>
+<a href="178.html" class="timeline__step" title="Quiz : Comprenez les bases du langage Python">
+<span class="timeline__stepName">
+Quiz : Comprenez les bases du langage Python
+ </span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="231888-creez-votre-premier-objet-les-chaines-de-caracteres.html" class="timeline__step" title="Créez votre premier objet : les chaînes de caractères">
+<span class="timeline__stepName">
+Créez votre premier objet : les chaînes de caractères
+</span>
+</a>
+<a href="232026-creez-des-listes-et-des-tuples-1-2.html" class="timeline__step" title="Créez des listes et des tuples (1/2)">
+<span class="timeline__stepName">
+Créez des listes et des tuples (1/2)
+</span>
+</a>
+<a href="232143-creez-des-listes-et-des-tuples-2-2.html" class="timeline__step" title="Créez des listes et des tuples (2/2)">
+<span class="timeline__stepName">
+Créez des listes et des tuples (2/2)
+</span>
+</a>
+<a href="232273-utilisez-des-dictionnaires.html" class="timeline__step" title="Utilisez des dictionnaires">
+<span class="timeline__stepName">
+Utilisez des dictionnaires
+</span>
+</a>
+<a href="232431-utilisez-des-fichiers.html" class="timeline__step" title="Utilisez des fichiers">
+<span class="timeline__stepName">
+Utilisez des fichiers
+</span>
+</a>
+<a href="232520-decouvrez-la-portee-des-variables-et-les-references.html" class="timeline__step" title="Découvrez la portée des variables et les références">
+<span class="timeline__stepName">
+Découvrez la portée des variables et les références
+</span>
+</a>
+<a href="232565-tp-realisez-un-bon-vieux-pendu.html" class="timeline__step" title="TP : Réalisez un bon vieux pendu">
+<span class="timeline__stepName">
+TP : Réalisez un bon vieux pendu
+</span>
+</a>
+<a href="179.html" class="timeline__step" title="Quiz : Maîtriser les règles de base du langage Python">
+<span class="timeline__stepName">
+Quiz : Maîtriser les règles de base du langage Python
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="232721-apprehendez-les-classes.html" class="timeline__step" title="Appréhendez les classes">
+<span class="timeline__stepName">
+Appréhendez les classes
+</span>
+</a>
+<a href="232793-definissez-des-proprietes.html" class="timeline__step" title="Définissez des propriétés">
+<span class="timeline__stepName">
+Définissez des propriétés
+</span>
+</a>
+<a href="233046-appliquez-des-methodes-speciales.html" class="timeline__step" title="Appliquez des méthodes spéciales">
+<span class="timeline__stepName">
+Appliquez des méthodes spéciales
+</span>
+</a>
+<a href="2233523-appliquez-deux-methodes-de-tri-en-python.html" class="timeline__step" title="Appliquez deux méthodes de tri en Python">
+<span class="timeline__stepName">
+Appliquez deux méthodes de tri en Python
+</span>
+</a>
+<a href="233164-gerez-les-heritages.html" class="timeline__step" title="Gérez les héritages">
+<span class="timeline__stepName">
+Gérez les héritages
+</span>
+</a>
+<a href="233261-decouvrez-la-boucle-for.html" class="timeline__step" title="Découvrez la boucle for">
+<span class="timeline__stepName">
+Découvrez la boucle for
+</span>
+</a>
+<a href="233322-tp-realisez-un-dictionnaire-ordonne.html" class="timeline__step" title="TP : Réalisez un dictionnaire ordonné">
+<span class="timeline__stepName">
+TP : Réalisez un dictionnaire ordonné
+</span>
+</a>
+<a href="233491-apprehendez-les-decorateurs.html" class="timeline__step" title="Appréhendez les décorateurs">
+<span class="timeline__stepName">
+Appréhendez les décorateurs
+</span>
+</a>
+<a href="233659-decouvrez-les-metaclasses.html" class="timeline__step" title="Découvrez les métaclasses">
+<span class="timeline__stepName">
+Découvrez les métaclasses
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="233857-manipulez-les-expressions-regulieres.html" class="timeline__step" title="Manipulez les expressions régulières">
+<span class="timeline__stepName">
+Manipulez les expressions régulières
+</span>
+</a>
+<a href="234041-exprimez-le-temps.html" class="timeline__step" title="Exprimez le temps">
+<span class="timeline__stepName">
+Exprimez le temps
+</span>
+</a>
+<a href="234239-faites-de-la-programmation-systeme.html" class="timeline__step" title="Faites de la programmation système">
+<span class="timeline__stepName">
+Faites de la programmation système
+</span>
+</a>
+<a href="234357-utilisez-des-modules-de-mathematiques.html" class="timeline__step" title="Utilisez des modules de mathématiques">
+<span class="timeline__stepName">
+Utilisez des modules de mathématiques
+</span>
+</a>
+<a href="234500-gerez-les-mots-de-passe.html" class="timeline__step" title="Gérez les mots de passe">
+<span class="timeline__stepName">
+Gérez les mots de passe
+</span>
+</a>
+<a href="234698-gerez-les-reseaux.html" class="timeline__step" title="Gérez les réseaux">
+<span class="timeline__stepName">
+Gérez les réseaux
+</span>
+</a>
+<a href="2235416-creez-des-tests-unitaires-avec-unittest.html" class="timeline__step" title="Créez des tests unitaires avec unittest">
+<span class="timeline__stepName">
+Créez des tests unitaires avec unittest
+</span>
+</a>
+<a href="2235545-faites-de-la-programmation-parallele-avec-threading.html" class="timeline__step" title="Faites de la programmation parallèle avec threading">
+<span class="timeline__stepName">
+Faites de la programmation parallèle avec threading
+</span>
+</a>
+<a href="234859-creez-des-interfaces-graphiques-avec-tkinter.html" class="timeline__step" title="Créez des interfaces graphiques avec Tkinter">
+<span class="timeline__stepName">
+Créez des interfaces graphiques avec Tkinter
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="234928-ecrire-nos-programmes-python-dans-des-fichiers.html" class="timeline__step" title="Écrire nos programmes Python dans des fichiers">
+<span class="timeline__stepName">
+Écrire nos programmes Python dans des fichiers
+</span>
+</a>
+<a href="235020-distribuer-facilement-nos-programmes-python-avec-cx-freeze.html" class="timeline__step" title="Distribuer facilement nos programmes Python avec cx_Freeze">
+<span class="timeline__stepName">
+Distribuer facilement nos programmes Python avec cx_Freeze
+</span>
+</a>
+<a href="235263-de-bonnes-pratiques.html" class="timeline__step js-current-timeline-step" title="De bonnes pratiques">
+<span class="timeline__stepName">
+De bonnes pratiques
+</span>
+<span class="timeline__progressMarker"></span>
+</a>
+<a href="235342-pour-finir-et-bien-continuer.html" class="timeline__step" title="Pour finir et bien continuer">
+<span class="timeline__stepName">
+Pour finir et bien continuer
+</span>
+</a>
+ <span class="timeline__splitChapter"></span>
+</div>
+<span class="timeline__iconContainer">
+<a href="certificate_example.html" title="Certificat de réussite (voir un exemple)" class="roundIcon timeline__roundIcon">
+<i class="icon-trophy roundIcon__icon"></i>
+</a>
+</span>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="contentWithSidebar  spacer  js-contentWithSidebar  grid-inner-content">
+<div class="contentWithSidebar__content">
+<div class="relative js-sidebar-container">
+<div class="static">
+<h2 itemprop="name" data-part-title="De bonnes pratiques" class="part-title">De bonnes pratiques</h2>
+<section class="space-bottom js-desktop-sticky-container">
+<div class="tooltipMessage tooltipMessage--noArrow">
+<i class="tooltipMessage__icon  icon-lock"></i>
+<a href="/fr/login">Connectez-vous</a> ou <a href="register.html">inscrivez-vous</a> gratuitement pour bénéficier de toutes les fonctionnalités de ce cours !
+</div>
+<div itemprop="articleBody" data-page-indentifier="/fr/courses/235344-apprenez-a-programmer-en-python/235263-de-bonnes-pratiques" class="js-isRestrictablePage js-course-container js-smilize " data-video-blocked-wrapper="<a href='/fr/login#popin-log-in' class='js-popin-activator'>">
+<div class="userContent js-userContent">
+<p id="r-2235856" data-claire-element-id="2512752">Nous allons à présent nous intéresser à quelques <strong>bonnes pratiques</strong> de codage en Python.</p><p id="r-2235857" data-claire-element-id="2512753">Les conventions que nous allons voir sont, naturellement, des propositions. Vous pouvez coder en Python sans les suivre.</p><p id="r-2235858" data-claire-element-id="2512754">Toutefois, prenez le temps de considérer les quelques affirmations ci-dessous. Si vous vous sentez concernés, ne serait-ce que par une d'entre elles, je vous invite à lire ce chapitre :</p><ul id="r-2235865" data-claire-element-id="2512761"><li id="r-2235860" data-claire-element-id="2512756"><p id="r-2235859" data-claire-element-id="2512755">Un code dont on est l'auteur peut être difficile à relire si on l'abandonne quelque temps.</p></li><li id="r-2235862" data-claire-element-id="2512758"><p id="r-2235861" data-claire-element-id="2512757">Lire le code d'un autre développeur est toujours plus délicat.</p></li><li id="r-2235864" data-claire-element-id="2512760"><p id="r-2235863" data-claire-element-id="2512759">Si votre code doit être utilisé par d'autres, il doit être facile à reprendre (à lire et à comprendre).</p></li></ul><h3 id="r-235034" data-claire-element-id="2512765">Pourquoi suivre les conventions des PEP ?</h3><p id="r-2235866" data-claire-element-id="2512762">Vous avez absolument le droit de répondre en disant que personne ne lira votre code de toute façon et que vous n'aurez aucun mal à comprendre votre propre code. Seulement, si votre code prend des proportions importantes, si l'application que vous développez devient de plus en plus utilisée ou si vous vous lancez dans un gros projet, il est préférable pour vous d'adopter quelques conventions clairement définies dès le début. Et, étant donné qu'il n'est jamais certain qu'un projet, même démarré comme un amusement passager, ne devienne pas un jour énorme, ayez les bons réflexes dès le début !</p><p id="r-2235867" data-claire-element-id="2512763">En outre, vous ne pouvez jamais être sûrs à cent pour cent qu'aucun développeur ne vous rejoindra, à terme, sur le projet. Si votre application est utilisée par d'autres, là encore, ce jour arrivera peut-être lorsque vous n'aurez pas assez de temps pour poursuivre seul son développement.</p><p id="r-2235868" data-claire-element-id="2512764">Quoi qu'il en soit, je vais vous présenter plusieurs conventions qui nous sont proposées au travers de PEP (<em>Python Enhancement Proposal</em> : proposition d'amélioration de Python). Encore une fois, il s'agit de propositions et vous pouvez choisir d'autres conventions si celles-ci ne vous plaisent pas.</p><h3 id="r-235089" data-claire-element-id="2512820">La PEP 20 : tout une philosophie</h3><p id="r-2235869" data-claire-element-id="2512766">La PEP 20, intitulée <em>The Zen of Python</em>, nous donne des conseils très généraux sur le développement. Elle est disponible sur <a href="https://www.python.org/dev/peps/pep-0020/">le site de Python</a>.</p><p id="r-2235870" data-claire-element-id="2512767">Bien entendu, ce sont davantage des conseils axés sur « comment programmer en Python » mais la plupart d'entre eux peuvent s'appliquer à la programmation en général.</p><p id="r-2235871" data-claire-element-id="2512768">Je vous propose une traduction de cette PEP :</p><ul id="r-2235910" data-claire-element-id="2512807"><li id="r-2235873" data-claire-element-id="2512770"><p id="r-2235872" data-claire-element-id="2512769"><em>Beautiful is better than ugly</em> : le beau est préférable au laid ;</p></li><li id="r-2235875" data-claire-element-id="2512772"><p id="r-2235874" data-claire-element-id="2512771"><em>Explicit is better than implicit</em> : l'explicite est préférable à l'implicite ;</p></li><li id="r-2235877" data-claire-element-id="2512774"><p id="r-2235876" data-claire-element-id="2512773"><em>Simple is better than complex</em> : le simple est préférable au complexe ;</p></li><li id="r-2235879" data-claire-element-id="2512776"><p id="r-2235878" data-claire-element-id="2512775"><em>Complex is better than complicated</em> : le complexe est préférable au compliqué ;</p></li><li id="r-2235881" data-claire-element-id="2512778"><p id="r-2235880" data-claire-element-id="2512777"><em>Flat is better than nested</em> : le plat est préférable à l'imbriqué. Moins littéralement, du code trop imbriqué (par exemple une boucle imbriquée dans une boucle imbriquée dans une boucle…) est plus difficile à lire ;</p></li><li id="r-2235883" data-claire-element-id="2512780"><p id="r-2235882" data-claire-element-id="2512779"><em>Sparse is better than dense</em> : l'aéré est préférable au compact ;</p></li><li id="r-2235885" data-claire-element-id="2512782"><p id="r-2235884" data-claire-element-id="2512781"><em>Readability counts</em> : la lisibilité compte ;</p></li><li id="r-2235887" data-claire-element-id="2512784"><p id="r-2235886" data-claire-element-id="2512783"><em>Special cases aren't special enough to break the rules</em> : les cas particuliers ne sont pas suffisamment particuliers pour casser la règle ;</p></li><li id="r-2235889" data-claire-element-id="2512786"><p id="r-2235888" data-claire-element-id="2512785"><em>Although practicality beats purity</em> : même si l'aspect pratique doit prendre le pas sur la pureté. Moins littéralement, il est difficile de faire un code à la fois fonctionnel et « pur » ;</p></li><li id="r-2235891" data-claire-element-id="2512788"><p id="r-2235890" data-claire-element-id="2512787"><em>Errors should never pass silently</em> : les erreurs ne devraient jamais passer silencieusement ;</p></li><li id="r-2235893" data-claire-element-id="2512790"><p id="r-2235892" data-claire-element-id="2512789"><em>Unless explicitly silenced</em> : à moins qu'elles n'aient été explicitement réduites au silence ;</p></li><li id="r-2235895" data-claire-element-id="2512792"><p id="r-2235894" data-claire-element-id="2512791"><em>In the face of ambiguity, refuse the temptation to guess</em> : en cas d'ambiguïté, résistez à la tentation de deviner ;</p></li><li id="r-2235897" data-claire-element-id="2512794"><p id="r-2235896" data-claire-element-id="2512793"><em>There should be one -- and preferably only one -- obvious way to do it</em> : il devrait exister une (et de préférence une seule) manière évidente de procéder ;</p></li><li id="r-2235899" data-claire-element-id="2512796"><p id="r-2235898" data-claire-element-id="2512795"><em>Although that way may not be obvious at first unless you're Dutch</em> : même si cette manière n'est pas forcément évidente au premier abord, à moins que vous ne soyez Néerlandais ; % il faudrait peut-être indiquer que c'est une blague ?</p></li><li id="r-2235901" data-claire-element-id="2512798"><p id="r-2235900" data-claire-element-id="2512797"><em>Now is better than never</em> : maintenant est préférable à jamais ;</p></li><li id="r-2235903" data-claire-element-id="2512800"><p id="r-2235902" data-claire-element-id="2512799"><em>Although never is often better than *right* now</em> : mais jamais est parfois préférable à <em>immédiatement</em> ;</p></li><li id="r-2235905" data-claire-element-id="2512802"><p id="r-2235904" data-claire-element-id="2512801"><em>If the implementation is hard to explain, it's a bad idea</em> : si la mise en œuvre est difficile à expliquer, c'est une mauvaise idée ;</p></li><li id="r-2235907" data-claire-element-id="2512804"><p id="r-2235906" data-claire-element-id="2512803"><em>If the implementation is easy to explain, it may be a good idea</em> : si la mise en œuvre est facile à expliquer, ce peut être une bonne idée ;</p></li><li id="r-2235909" data-claire-element-id="2512806"><p id="r-2235908" data-claire-element-id="2512805"><em>Namespaces are one honking great idea -- let's do more of those</em> : les espaces de noms sont une très bonne idée (faisons-en plus !).</p></li></ul><p id="r-2235911" data-claire-element-id="2512808">Comme vous le voyez, c'est une liste d'aphorismes très simples. Ils donnent des idées sur le développement Python mais, en les lisant pour la première fois, vous n'y voyez sans doute que peu de conseils pratiques.</p><p id="r-2235912" data-claire-element-id="2512809">Cependant, cette liste est vraiment importante et peut se révéler très utile. Certaines des idées qui s'y trouvent couvrent des pans entiers de la philosophie de Python.</p><p id="r-2235913" data-claire-element-id="2512810">Si vous travaillez sur un projet en équipe, un autre développeur pourra contester la mise en œuvre d'un extrait de code quelconque en se basant sur l'un des aphorismes cités plus haut.</p><p id="r-2235914" data-claire-element-id="2512811">Quand bien même vous travailleriez seul, il est toujours préférable de comprendre et d'appliquer la philosophie d'un langage quand on l'utilise pour du développement.</p><p id="r-2235915" data-claire-element-id="2512812">Je vous conseille donc de garder sous les yeux, autant que possible, cette synthèse de la philosophie de Python et de vous y référer à la moindre occasion. Commencez par lire chaque proposition. Les lignes sont courtes, prenez le temps de bien comprendre ce qu'elles veulent dire.</p><p id="r-2235916" data-claire-element-id="2512813">Sans trop détailler ce qui se trouve au-dessus (cela prendrait trop de temps), je signale à votre attention que plusieurs de ces aphorismes parlent surtout de l'allure du code. L'idée qui semble se dissimuler derrière, c'est qu'un code fonctionnel n'est pas suffisant : il faut, autant que possible, faire du « beau code ». Qui fonctionne, naturellement… mais ce n'est pas suffisant !</p><p id="r-2235917" data-claire-element-id="2512814">Maintenant, nous allons nous intéresser à deux autres PEP qui vous donnent des conseils très pratiques sur votre développement :</p><ul id="r-2235922" data-claire-element-id="2512819"><li id="r-2235919" data-claire-element-id="2512816"><p id="r-2235918" data-claire-element-id="2512815">la première nous donne des conseils très précis sur la présentation du code ;</p></li><li id="r-2235921" data-claire-element-id="2512818"><p id="r-2235920" data-claire-element-id="2512817">la seconde nous donne des conseils sur la documentation au cœur de notre code.</p></li></ul><h3 id="r-235217" data-claire-element-id="8776425">La PEP 8 : des conventions précises</h3><p id="r-2235923" data-claire-element-id="2512821">Maintenant que nous avons vu des directives très générales, nous allons nous intéresser à une autre proposition d'amélioration, la PEP 8. Elle nous donne des conseils très précis sur la forme du code. Là encore, c'est à vous de voir : vous pouvez appliquer la totalité des conseils donnés ici ou une partie seulement. Vous pouvez retrouver <a href=".html">la PEP 8 sur le site de Python</a>.</p><p id="r-2235924" data-claire-element-id="2512822">Je ne vais pas reprendre tout ce qui figure dans cette PEP mais je vais expliquer la plupart des conseils en les simplifiant. Par conséquent, si l'une des propositions présentées dans cette section manque d'explications à vos yeux, je vous conseille d'aller faire un tour sur la PEP originale. Ce qui suit n'est pas une traduction complète, j'insiste sur ce point.</p><h4 id="r-2235934" data-claire-element-id="8776382">Introduction</h4><p id="r-2235925" data-claire-element-id="2512823">L'une des convictions de Guido (Guido Van Rossum, créateur et BDFL, <em>Benevolent Dictator For Life</em> soit « dictateur bienveillant à vie » de Python) est que le code est lu beaucoup plus souvent qu'il n'est écrit. Les conseils donnés ici sont censés améliorer la lisibilité du code. Comme le dit la PEP 20, <em>la lisibilité compte</em> !</p><p id="r-2235926" data-claire-element-id="2512824">Un guide comme celui-ci parle de cohérence. La cohérence au cœur d'un projet est importante. La cohérence au sein d'une fonction ou d'un module est encore plus importante.</p><p id="r-2235927" data-claire-element-id="8776381">Mais il est encore plus essentiel de savoir « quand » être incohérent (parfois, les conseils de style donnés ici ne s'appliquent pas). En cas de doute, remettez-vous-en à votre bon sens. Regardez plusieurs exemples et choisissez celui qui semble le meilleur.</p><p id="r-2235928" data-claire-element-id="2512826">Il y a deux bonnes raisons de ne pas respecter une règle donnée :</p><ol id="r-2235933" data-claire-element-id="2512831"><li id="r-2235930" data-claire-element-id="2512828"><p id="r-2235929" data-claire-element-id="2512827">Quand appliquer la règle rend le code moins lisible.</p></li><li id="r-2235932" data-claire-element-id="2512830"><p id="r-2235931" data-claire-element-id="2512829">Dans un soucis de cohérence avec du code existant qui ne respecte pas cette règle non plus. Ce cas peut se produire si vous utilisez un module ou une bibliothèque qui ne respecte pas les mêmes conventions que celles définies ici.</p></li></ol><h4 id="r-2235951" data-claire-element-id="8776386">Forme du code</h4><ul id="r-2393417" data-claire-element-id="8776384"><li id="r-4794496" data-claire-element-id="8776383"><ul id="r-2235942" data-claire-element-id="2831310"><li id="r-2235936" data-claire-element-id="2512834"><p id="r-2235935" data-claire-element-id="2512833">Indentation : utilisez 4 espaces par niveau d'indentation.</p></li><li id="r-2235938" data-claire-element-id="2512836"><p id="r-2235937" data-claire-element-id="2512835">Tabulations ou espaces : ne mélangez <em>jamais</em>, dans le même projet, des indentations à base d'espaces et d'autres à base de tabulations. À choisir, on préfère généralement les espaces mais les tabulations peuvent être également utilisées pour marquer l'indentation.</p></li><li id="r-2235940" data-claire-element-id="2512838"><p id="r-2235939" data-claire-element-id="2512837">Longueur maximum d'une ligne : limitez vos lignes à un maximum de 79 caractères. De nombreux éditeurs favorisent des lignes de 79 caractères maximum. Pour les blocs de texte relativement longs (docstrings, par exemple), limitez-vous de préférence à 72 caractères par ligne.</p></li></ul></li></ul><p id="r-2235941" data-claire-element-id="8776385">Quand cela est possible, découpez vos lignes en utilisant des parenthèses, crochets ou accolades plutôt que l'anti-slash<code data-claire-semantic="text">\</code>. Exemple :</p><pre id="r-2235943" data-claire-element-id="2831312"><code data-claire-semantic="python">appel_d_une_fonction(parametre_1, parametre_2,
+        parametre_3, parametre_4):
+   ...</code></pre><p id="r-2235944" data-claire-element-id="2512842">Si vous devez découper une ligne trop longue, faites la césure <em>après</em> l'opérateur, pas avant.</p><pre id="r-2235945" data-claire-element-id="2831313"><code data-claire-semantic="python"># Oui
+    un_long_calcul = variable + \
+            taux * 100
+    
+# Non
+    un_long_calcul = variable \
+            + taux * 100</code></pre><ul id="r-2393418" data-claire-element-id="2831314"><li id="r-2235947" data-claire-element-id="2512845"><p id="r-2235946" data-claire-element-id="2512844">Sauts de ligne : séparez par deux sauts de ligne la définition d'une fonction et la définition d'une classe.</p></li></ul><p id="r-2235948" data-claire-element-id="2512846">Les définitions de méthodes au cœur d'une classe sont séparées par une ligne vide. Des sauts de ligne peuvent également être utilisés, parcimonieusement, pour délimiter des portions de code</p><ul id="r-2393419" data-claire-element-id="2831315"><li id="r-2235950" data-claire-element-id="2512848"><p id="r-2235949" data-claire-element-id="2512847">Encodage : à partir de Python 3.0, il est conseillé d'utiliser, dans du code comportant des accents, l'encodage Utf-8.</p></li></ul><h4 id="r-2235975" data-claire-element-id="2831322">Directives d'importation</h4><ul id="r-2235954" data-claire-element-id="2512852"><li id="r-2235953" data-claire-element-id="2512851"><p id="r-2235952" data-claire-element-id="2512850">Les directives d'importation doivent préférentiellement se trouver sur plusieurs lignes. Par exemple :</p></li></ul><pre id="r-2235955" data-claire-element-id="2831317"><code data-claire-semantic="python">import os
+import sys</code></pre><p id="r-2235956" data-claire-element-id="2512854">plutôt que :</p><pre id="r-2235957" data-claire-element-id="2831318"><code data-claire-semantic="python">import os, sys</code></pre><p id="r-2235958" data-claire-element-id="2512856">Cette syntaxe est cependant acceptée quand on importe certaines données d'un module :</p><pre id="r-2235959" data-claire-element-id="2831319"><code data-claire-semantic="python">from subprocess import Popen, PIPE</code></pre><ul id="r-2393420" data-claire-element-id="2831320"><li id="r-2235961" data-claire-element-id="2512859"><p id="r-2235960" data-claire-element-id="2512858">Les directives d'importation doivent toujours se trouver en tête du fichier, sous la documentation éventuelle du module mais avant la définition de variables globales ou de constantes du module.</p></li><li id="r-2235971" data-claire-element-id="2512869"><p id="r-2235962" data-claire-element-id="2512860">Les directives d'importation doivent être divisées en trois groupes, dans l'ordre :</p><ol id="r-2235969" data-claire-element-id="2512867"><li id="r-2235964" data-claire-element-id="2512862"><p id="r-2235963" data-claire-element-id="2512861">les directives d'importation faisant référence à la bibliothèque standard ;</p></li><li id="r-2235966" data-claire-element-id="2512864"><p id="r-2235965" data-claire-element-id="2512863">les directives d'importation faisant référence à des bibliothèques tierces ;</p></li><li id="r-2235968" data-claire-element-id="2512866"><p id="r-2235967" data-claire-element-id="2512865">les directives d'importation faisant référence à des modules de votre projet.</p></li></ol><p id="r-2235970" data-claire-element-id="2512868">Il devrait y avoir un saut de ligne entre chaque groupe de directives d'importation.</p></li><li id="r-2235973" data-claire-element-id="2512871"><p id="r-2235972" data-claire-element-id="2512870">Dans vos directives d'importation, utilisez des chemins absolus plutôt que relatifs. Autrement dit :</p></li></ul><pre id="r-2235974" data-claire-element-id="2831321"><code data-claire-semantic="python">from paquet.souspaquet import module
+
+# Est préférable à
+from . import module</code></pre><h4 id="r-2236013" data-claire-element-id="8776404">Le signe espace dans les expressions et instructions</h4><ul id="r-2236012" data-claire-element-id="8776403"><li id="r-2235993" data-claire-element-id="8776390"><p id="r-2235976" data-claire-element-id="2512874">Évitez le signe espace dans les situations suivantes :</p><ul id="r-2235992" data-claire-element-id="8776389"><li id="r-2235979" data-claire-element-id="2831324"><p id="r-2235977" data-claire-element-id="2512875">Au cœur des parenthèses, crochets et accolades :</p><pre id="r-2235978" data-claire-element-id="2831323"><code data-claire-semantic="python"># Oui
+    spam(ham[1], {eggs: 2})
+
+# Non
+    spam( ham[ 1 ], { eggs: 2 } )</code></pre></li><li id="r-2235982" data-claire-element-id="2831326"><p id="r-2235980" data-claire-element-id="2512878">Juste avant une virgule, un point-virgule ou un signe deux points :</p><pre id="r-2235981" data-claire-element-id="2831325"><code data-claire-semantic="python"># Oui
+    if x == 4: print x, y; x, y = y, x
+
+# Non
+    if x == 4 : print x , y ; x , y = y , x</code></pre></li><li id="r-2235985" data-claire-element-id="2831328"><p id="r-2235983" data-claire-element-id="2512881">Juste avant la parenthèse ouvrante qui introduit la liste des paramètres d'une fonction :</p><pre id="r-2235984" data-claire-element-id="2831327"><code data-claire-semantic="python"># Oui
+    spam(1)
+
+# Non
+    spam (1)</code></pre></li><li id="r-2235988" data-claire-element-id="2831330"><p id="r-2235986" data-claire-element-id="2512884">Juste avant le crochet ouvrant indiquant une indexation ou sélection :</p><pre id="r-2235987" data-claire-element-id="2831329"><code data-claire-semantic="python"># Oui
+    dict['key'] = list[index]
+
+# Non
+    dict ['key'] = list [index]</code></pre></li><li id="r-2235991" data-claire-element-id="8776388"><p id="r-2235989" data-claire-element-id="8776387">Plus d'un espace autour de l'opérateur d'affectation<code data-claire-semantic="text">=</code>(ou autre) pour l'aligner avec une autre instruction :</p><pre id="r-2235990" data-claire-element-id="2831331"><code data-claire-semantic="python"># Oui
+    x = 1
+    y = 2
+    long_variable = 3
+
+# Non
+    x             = 1
+    y             = 2
+    long_variable = 3</code></pre></li></ul></li><li id="r-2236008" data-claire-element-id="8776402"><p id="r-2235994" data-claire-element-id="2512892">Toujours entourer les opérateurs suivants d'un espace (un avant le symbole, un après) :</p><ul id="r-2236003" data-claire-element-id="8776399"><li id="r-2235996" data-claire-element-id="8776392"><p id="r-2235995" data-claire-element-id="8776391">affectation :<code data-claire-semantic="text">=</code>,<code data-claire-semantic="text">+=</code>,<code data-claire-semantic="text">-=</code>, etc. ;</p></li><li id="r-2235998" data-claire-element-id="8776394"><p id="r-2235997" data-claire-element-id="8776393">comparaison :<code data-claire-semantic="text">&lt;</code>,<code data-claire-semantic="text">&gt;</code>,<code data-claire-semantic="text">&lt;=</code>, …,<code data-claire-semantic="text">in</code>,<code data-claire-semantic="text">not in</code>,<code data-claire-semantic="text">is</code>,<code data-claire-semantic="text">is not</code>;</p></li><li id="r-2236000" data-claire-element-id="8776396"><p id="r-2235999" data-claire-element-id="8776395">booléens :<code data-claire-semantic="text">and</code>,<code data-claire-semantic="text">or</code>,<code data-claire-semantic="text">not</code>;</p></li><li id="r-2236002" data-claire-element-id="8776398"><p id="r-2236001" data-claire-element-id="8776397">arithmétiques :<code data-claire-semantic="text">+</code>,<code data-claire-semantic="text">-</code>,<code data-claire-semantic="text">*</code>, etc.</p></li></ul><pre id="r-2236004" data-claire-element-id="2831335"><code data-claire-semantic="python"># Oui
+    i = i + 1
+    submitted += 1
+    x = x * 2 - 1
+    hypot2 = x * x + y * y
+    c = (a + b) * (a - b)
+
+# Non
+    i=i+1
+    submitted +=1
+    x = x*2 - 1
+    hypot2 = x*x + y*y
+    c = (a+b) * (a-b)</code></pre><aside id="r-2236006" data-claire-element-id="8776401" data-claire-semantic="warning"><p id="r-2236005" data-claire-element-id="8776400">Attention : n'utilisez pas d'espaces autour du signe<code data-claire-semantic="text">=</code>si c'est dans le contexte d'un paramètre ayant une valeur par défaut (définition d'une fonction) ou d'un appel de paramètre (appel de fonction).</p></aside><pre id="r-2236007" data-claire-element-id="2831336"><code data-claire-semantic="python"># Oui
+    def fonction(parametre=5):
+        ...
+    fonction(parametre=32)
+
+# Non
+    def fonction(parametre = 5):
+        ...
+    fonction(parametre = 32)</code></pre></li><li id="r-2236011" data-claire-element-id="2831339"><p id="r-2236009" data-claire-element-id="2512907">Il est déconseillé de mettre plusieurs instructions sur une même ligne :</p><pre id="r-2236010" data-claire-element-id="2831338"><code data-claire-semantic="python"># Oui
+    if foo == 'blah':
+        do_blah_thing()
+    do_one()
+    do_two()
+    do_three()
+
+# Plutôt que
+    if foo == 'blah': do_blah_thing()
+    do_one(); do_two(); do_three()</code></pre></li></ul><h4 id="r-2236023" data-claire-element-id="2512921">Commentaires</h4><aside id="r-2236015" data-claire-element-id="2512913" data-claire-semantic="warning"><p id="r-2236014" data-claire-element-id="2512912">Les commentaires qui contredisent le code sont pires qu'une absence de commentaire. Lorsque le code doit changer, faites passer parmi vos priorités absolues la mise à jour des commentaires !</p></aside><ul id="r-2236022" data-claire-element-id="2512920"><li id="r-2236017" data-claire-element-id="2512915"><p id="r-2236016" data-claire-element-id="2512914">Les commentaires doivent être des phrases complètes, commençant par une majuscule. Le point terminant la phrase peut être absent si le commentaire est court.</p></li><li id="r-2236019" data-claire-element-id="2512917"><p id="r-2236018" data-claire-element-id="2512916">Si vous écrivez en anglais, les règles de langue définies par Strunk and White dans « The Elements of Style » s'appliquent.</p></li><li id="r-2236021" data-claire-element-id="2512919"><p id="r-2236020" data-claire-element-id="2512918">À l'attention des codeurs non-anglophones : s'il vous plaît, écrivez vos commentaires en anglais, sauf si vous êtes sûrs à 120% que votre code ne sera jamais lu par quelqu'un qui ne comprend pas votre langue (ou que vous ne parlez vraiment pas un mot d'anglais !).</p></li></ul><h4 id="r-2236036" data-claire-element-id="8776417">Conventions de nommage</h4><h5 id="r-2236025" data-claire-element-id="8776406">Noms à éviter</h5><p id="r-2236024" data-claire-element-id="8776405">N'utilisez jamais les caractères suivants de manière isolée comme noms de variables :<code data-claire-semantic="text">l</code>(L minuscule),<code data-claire-semantic="text">O</code>(o majuscule) et<code data-claire-semantic="text">I</code>(i majuscule). L'affichage de ces caractères dans certaines polices fait qu'ils peuvent être aisément confondus avec les chiffres<code data-claire-semantic="text">0</code>ou<code data-claire-semantic="text">1</code>.</p><h5 id="r-2236027" data-claire-element-id="8776408">Noms des modules et packages</h5><p id="r-2236026" data-claire-element-id="8776407">Les modules et packages doivent avoir des noms courts, constitués de lettres minuscules. Les noms de modules peuvent contenir des signes<code data-claire-semantic="text">_</code>(souligné). Bien que les noms de packages puissent également en contenir, la PEP 8 nous le déconseille.</p><h5 id="r-2236029" data-claire-element-id="8776410">Noms de classes</h5><p id="r-2236028" data-claire-element-id="8776409">Sans presque aucune exception, les noms de classes utilisent la convention suivante : la variable est écrite en minuscules, exceptée la première lettre de chaque mot qui la constitue. Par exemple :<code data-claire-semantic="text">MaClasse</code>.</p><h5 id="r-2236031" data-claire-element-id="8776412">Noms d'exceptions</h5><p id="r-2236030" data-claire-element-id="8776411">Les exceptions étant des classes, elles suivent la même convention. En anglais, si l'exception est une erreur, on fait suivre le nom du suffixe<code data-claire-semantic="text">Error</code>(vous retrouvez cette convention dans<code data-claire-semantic="text">SyntaxError</code>,<code data-claire-semantic="text">IndexError</code>…).</p><h5 id="r-2236033" data-claire-element-id="8776414">Noms de variables, fonctions et méthodes</h5><p id="r-2236032" data-claire-element-id="8776413">La même convention est utilisée pour les noms de variables (instances d'objets), de fonctions ou de méthodes : le nom est entièrement écrit en minuscules et les mots sont séparés par des signes soulignés (<code data-claire-semantic="text">_</code>). Exemple :<code data-claire-semantic="text">nom_de_fonction</code>.</p><h5 id="r-2236035" data-claire-element-id="8776416">Constantes</h5><p id="r-2236034" data-claire-element-id="8776415">Les constantes doivent être écrites entièrement en majuscules, les mots étant séparés par un signe souligné (<code data-claire-semantic="text">_</code>). Exemple :<code data-claire-semantic="text">NOM_DE_MA_CONSTANTE</code>.</p><h4 id="r-2236047" data-claire-element-id="8776424">Conventions de programmation</h4><h5 id="r-2236046" data-claire-element-id="8776423">Comparaisons</h5><p id="r-2236037" data-claire-element-id="8776418">Les comparaisons avec des singletons (comme<code data-claire-semantic="text">None</code>) doivent toujours se faire avec les opérateurs<code data-claire-semantic="text">is</code>et<code data-claire-semantic="text">is not</code>, jamais avec les opérateurs<code data-claire-semantic="text">==</code>ou<code data-claire-semantic="text">!=</code>.</p><pre id="r-2236038" data-claire-element-id="2831342"><code data-claire-semantic="python"># Oui
+    if objet is None:
+        ...
+
+# Non
+    if objet == None:
+        ...</code></pre><p id="r-2236039" data-claire-element-id="8776419">Quand cela est possible, utilisez l'instruction<code data-claire-semantic="text">if objet:</code>si vous voulez dire<code data-claire-semantic="text">if objet is not None:</code>.</p><p id="r-2236040" data-claire-element-id="8776420">La vérification du type d'un objet doit se faire avec la fonction<code data-claire-semantic="text">isinstance</code>:</p><pre id="r-2236041" data-claire-element-id="2831343"><code data-claire-semantic="python"># Oui
+    if isinstance(variable, str):
+        ...
+
+# Non
+    if type(variable) == str:
+        ...</code></pre><p id="r-2236042" data-claire-element-id="8776421">Quand vous comparez des séquences, utilisez le fait qu'une séquence vide est<code data-claire-semantic="text">False</code>.</p><pre id="r-2236043" data-claire-element-id="2831344"><code data-claire-semantic="python">if liste: # La liste n'est pas vide</code></pre><p id="r-2236044" data-claire-element-id="8776422">Enfin, ne comparez pas des booléens à<code data-claire-semantic="text">True</code>ou<code data-claire-semantic="text">False</code>:</p><pre id="r-2236045" data-claire-element-id="2831345"><code data-claire-semantic="python"># Oui
+    if booleen: # Si booleen est vrai
+        ...
+    if not booleen: # Si booleen n'est pas vrai
+        ...
+
+# Non
+    if booleen == True:
+        ...
+
+# Encore pire
+    if booleen is True:
+        ...</code></pre><h4 id="r-2236049" data-claire-element-id="2512947">Conclusion</h4><p id="r-2236048" data-claire-element-id="2512946">Voilà pour la PEP 8 ! Elle contient beaucoup de conventions et toutes ne figurent pas dans cette section. Celles que j'ai présentées ici, dans tous les cas, sont moins détaillées. Je vous invite donc à faire un tour du côté du texte original si vous désirez en savoir plus.</p><h3 id="r-235262" data-claire-element-id="8776437">La PEP 257 : de belles documentations</h3><p id="r-2236050" data-claire-element-id="2512949">Nous allons nous intéresser à présent à la PEP 257 qui définit d'autres conventions concernant la documentation via les docstrings. Consultez-la sur <a href=".html">le site de Python</a>.</p><pre id="r-2236051" data-claire-element-id="2831349"><code data-claire-semantic="python">def fonction(parametre1, parametre2):
+    &quot;&quot;&quot;Documentation de la fonction.&quot;&quot;&quot;</code></pre><p id="r-2236052" data-claire-element-id="2512951">La ligne 2 de ce code, que vous avez sans doute reconnue, est une docstring. Nous allons voir quelques conventions autour de l'écriture de ces docstrings (comment les rédiger, qu'y faire figurer, etc.).</p><p id="r-2236053" data-claire-element-id="2512952">Une fois de plus, je vais prendre quelques libertés avec le texte original de la PEP. Je ne vous proposerai pas une traduction complète de la PEP mais je reviendrai sur les points que je considère importants.</p><h4 id="r-2236064" data-claire-element-id="8776429">Qu'est-ce qu'une docstring ?</h4><p id="r-2236054" data-claire-element-id="8776426">La docstring (chaîne de documentation, en français) est une chaîne de caractères placée juste après la définition d'un module, d'une classe, fonction ou méthode. Cette chaîne de caractères devient l'attribut spécial<code data-claire-semantic="text">__doc__</code>de l'objet.</p><pre id="r-2236055" data-claire-element-id="2831350"><code data-claire-semantic="python">&gt;&gt;&gt; fonction.__doc__
+'Documentation de la fonction.'
+&gt;&gt;&gt;</code></pre><p id="r-2236056" data-claire-element-id="8776427">Tous les modules doivent être documentés grâce aux docstrings. Les fonctions et classes exportées par un module doivent également être documentées ainsi. Cela vaut aussi pour les méthodes publiques d'une classe (y compris le constructeur<code data-claire-semantic="text">__init__</code>). Un package peut être documenté via une docstring placée dans le fichier<code data-claire-semantic="text">__init__.py</code>.</p><p id="r-2236057" data-claire-element-id="8776428">Pour des raisons de cohérence, utilisez toujours des guillemets triples &quot;&quot;&quot; autour de vos docstrings. Utilisez<code data-claire-semantic="text">&quot;&quot;&quot;chaîne de documentation&quot;&quot;&quot;</code>si votre chaîne comporte des anti-slash<code data-claire-semantic="text">\</code>.</p><p id="r-2236058" data-claire-element-id="2512957">On peut trouver les docstrings sous deux formes :</p><ul id="r-2236063" data-claire-element-id="2512962"><li id="r-2236060" data-claire-element-id="2512959"><p id="r-2236059" data-claire-element-id="2512958">sur une seule ligne ;</p></li><li id="r-2236062" data-claire-element-id="2512961"><p id="r-2236061" data-claire-element-id="2512960">sur plusieurs lignes.</p></li></ul><h4 id="r-2236082" data-claire-element-id="8776434">Les docstrings sur une seule ligne</h4><pre id="r-2236065" data-claire-element-id="2831352"><code data-claire-semantic="python">def kos_root():
+    &quot;&quot;&quot;Return the pathname of the KOS root directory.&quot;&quot;&quot;
+    global _kos_root
+    if _kos_root: return _kos_root
+    …</code></pre><h5 id="r-2236081" data-claire-element-id="8776433">Notes</h5><ul id="r-2236076" data-claire-element-id="8776432"><li id="r-2236067" data-claire-element-id="2512966"><p id="r-2236066" data-claire-element-id="2512965">Les guillemets triples sont utilisés même si la chaîne tient sur une seule ligne. Il est plus simple de l'étendre par la suite dans ces conditions.</p></li><li id="r-2236069" data-claire-element-id="2512968"><p id="r-2236068" data-claire-element-id="2512967">Les trois guillemets &quot;&quot;&quot; fermant la chaîne sont sur la même ligne que les trois guillemets qui l'ouvrent. Ceci est préférable pour une docstring d'une seule ligne.</p></li><li id="r-2236071" data-claire-element-id="2512970"><p id="r-2236070" data-claire-element-id="2512969">Il n'y a aucun saut de ligne avant ou après la docstring.</p></li><li id="r-2236073" data-claire-element-id="8776431"><p id="r-2236072" data-claire-element-id="8776430">La chaîne de documentation est une phrase, elle se termine par un point<code data-claire-semantic="text">.</code>.</p></li><li id="r-2236075" data-claire-element-id="2512974"><p id="r-2236074" data-claire-element-id="2512973">La docstring sur une seule ligne <em>ne doit pas</em> décrire la signature des paramètres à passer à la fonction/méthode, ou son type de retour. N'écrivez pas :</p></li></ul><pre id="r-2236077" data-claire-element-id="2831353"><code data-claire-semantic="python">def fonction(a, b):
+    &quot;&quot;&quot;fonction(a, b) -&gt; list&quot;&quot;&quot;</code></pre><p id="r-2236078" data-claire-element-id="2512977">Cette syntaxe est uniquement valable pour les fonctions C (comme les <em>built-ins</em>). Pour les fonctions Python, l'introspection peut être utilisée pour déterminer les paramètres attendus. L'introspection ne peut cependant pas être utilisée pour déterminer le type de retour de la fonction/méthode. Si vous voulez le préciser, incluez-le dans la docstring sous une forme explicite :</p><pre id="r-2236079" data-claire-element-id="2831354"><code data-claire-semantic="python">&quot;&quot;&quot;Fonction faisant cela et renvoyant une liste.&quot;&quot;&quot;</code></pre><p id="r-2236080" data-claire-element-id="2512979">Bien entendu, « faisant cela » doit être remplacé par une description utile de ce que fait la fonction !</p><h4 id="r-2236093" data-claire-element-id="8776436">Les docstrings sur plusieurs lignes</h4><p id="r-2236083" data-claire-element-id="2512982">Les docstrings sur plusieurs lignes sont constituées d'une première ligne résumant brièvement l'objet (fonction, méthode, classe, module), suivie d'un saut de ligne, suivi d'une description plus longue. Respectez autant que faire se peut cette convention : une ligne de description brève, un saut de ligne puis une description plus longue.</p><p id="r-2236084" data-claire-element-id="2512983">La première ligne de la docstring peut se trouver juste après les guillemets ouvrant la chaîne ou juste en-dessous.<br /> Dans tous les cas, le reste de la docstring doit être indenté au même niveau que la première ligne :</p><pre id="r-2236085" data-claire-element-id="2831357"><code data-claire-semantic="python">class MaClasse:
+    def __init__(self, ...):
+        &quot;&quot;&quot;Constructeur de la classe MaClasse
+
+        Une description plus longue...
+        sur plusieurs lignes...
+        
+        &quot;&quot;&quot;</code></pre><p id="r-2236086" data-claire-element-id="2512985">Insérez un saut de ligne avant et après chaque docstring documentant une classe.</p><p id="r-2236087" data-claire-element-id="8776435">La docstring d'un module doit généralement dresser la liste des classes, exceptions et fonctions, ainsi que des autres objets exportés par ce module (une ligne de description par objet). Cette ligne de description donne généralement moins d'informations sur l'objet que sa propre documentation. La documentation d'un package (la docstring se trouvant dans le fichier<code data-claire-semantic="text">__init__.py</code>) doit également dresser la liste des modules et sous-packages qu'il exporte.</p><p id="r-2236088" data-claire-element-id="2512987">La documentation d'une fonction ou méthode doit décrire son comportement et documenter ses arguments, sa valeur de retour, ses effets de bord, les exceptions qu'elle peut lever et les restrictions concernant son appel (quand ou dans quelles conditions appeler cette fonction). Les paramètres optionnels doivent également être documentés.</p><pre id="r-2236089" data-claire-element-id="2831358"><code data-claire-semantic="python">def complexe(reel=0.0, image=0.0):
+    &quot;&quot;&quot;Forme un nombre complexe.
+
+    Paramètres nommés :
+    reel -- la partie réelle (0.0 par défaut)
+    image -- la partie imaginaire (0.0 par défaut)
+
+    &quot;&quot;&quot;
+    if image == 0.0 and reel == 0.0: return complexe_zero
+    ...</code></pre><p id="r-2236090" data-claire-element-id="2512989">La documentation d'une classe doit, de même, décrire son comportement, documenter ses méthodes publiques et ses attributs.</p><p id="r-2236091" data-claire-element-id="2512990">Le BDFL nous conseille de sauter une ligne avant de fermer nos docstrings quand elles sont sur plusieurs lignes. Les trois guillemets fermant la docstring sont ainsi sur une ligne vide par ailleurs.</p><pre id="r-2236092" data-claire-element-id="2831359"><code data-claire-semantic="python">def fonction():
+    &quot;&quot;&quot;Documentation brève sur une ligne.
+    
+    Documentation plus longue...
+    
+    &quot;&quot;&quot;</code></pre>
+</div>
+<div class="js-courseSelementActions sideActions">
+<ul class="sideActions__container">
+<li>
+<a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip" href="#.html" data-tooltip="Copier le lien" data-tooltip-done="Lien copié !">
+#
+</a>
+</li>
+</ul>
+</div>
+</div>
+<nav id="course-pagination" class="course-pagination    clearfix">
+<a href="235020-distribuer-facilement-nos-programmes-python-avec-cx-freeze.html" class="button button--secondary  course-pagination__btn course-pagination__btn--previous">
+<i class="icon-previous"></i>
+<span>Distribuer facilement nos programmes Python avec cx_Freeze</span>
+</a>
+<span class="course-pagination__separator"></span>
+<a href="235342-pour-finir-et-bien-continuer.html" class="button button--secondary  course-pagination__btn course-pagination__btn--next">
+<span>Pour finir et bien continuer</span>
+<i class="icon-next"></i>
+</a>
+</nav>
+<div tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="popin-view-restriction_popin_title" class="popin popin--illustrated  js-popin" id="popin-view-restriction">
+<button class="popin__close-button  js-close-button" title="Fermer" aria-label="Fermer">
+<i class="icon-close" aria-hidden="true"></i>
+</button>
+<div class="popin__inner">
+<div class="popin__illustrationWrapper">
+<div class="popin__illustration illustration--balloon"></div>
+</div>
+<div class="popin__mainContainer">
+<div class="popin__gigTitleContainer js-popin-title">
+<div class="gigWorkersPopin__timeline">
+<div class="gigWorkersPopin__dot">1</div>
+<div class="gigWorkersPopin__line"></div>
+<div class="gigWorkersPopin__dot gigWorkersPopin__dot--disabled">2</div>
+</div>
+<div class="popin__title">Créez un compte <br /> OpenClassrooms</div>
+</div>
+<div id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</div>
+<div class="popin__content  js-popin-content">
+<div class="popin__contentWrapper">
+<p>
+Très heureux de voir que nos cours vous plaisent, déjà 5 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+</p>
+<p>
+Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres membres.
+</p>
+</div>
+</div>
+<div class="popin__actions  js-popin-actions">
+<span class="u--inlineBlock">
+<a class="button button--primary " href="register.html">S'inscrire</a>
+</span>
+<span class="u--inlineBlock">
+<a class="button button--secondary " href="login.html">Se connecter</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div id="popin-not-certifying-yet_540047" class="popin" data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <span><i class='icon-star'></i> Devenez Premium</span>
+                    ">
+<img alt="Exemple de certificat de réussite" src="235263-de-bonnes-pratiques//static.oc-static.com/prod/images/courses/certif.jpg" />
+</div>
+<div id="popin-not-certifying-yet_694661" class="popin" data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <span><i class='icon-star'></i> Devenez Premium</span>
+                    ">
+<img alt="Exemple de certificat de réussite" src="235263-de-bonnes-pratiques//static.oc-static.com/prod/images/courses/certif.jpg" />
+</div>
+</div>
+<aside id="content-with-sidebar" class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement">
+<nav class="col-nav">
+<div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+<div class="col-nav__block  col-nav__block--summary">
+<div class="side-paginate">
+<a href="235020-distribuer-facilement-nos-programmes-python-avec-cx-freeze.html" class="side-paginate__previous" title="Chapitre précédent">
+<i class="icon-previous"></i>
+</a>
+<span class="side-paginate__separator"></span>
+<h6 class="side-paginate__title">
+Annexes
+</h6>
+<span class="side-paginate__separator"></span>
+<a href="235342-pour-finir-et-bien-continuer.html" class="side-paginate__next" title="Chapitre suivant">
+<i class="icon-next"></i>
+</a>
+</div>
+<div class="col-nav__block--summary-list">
+<ol class="col-nav__chapters">
+<li class="">
+<a class="col-nav__chapterTitle" href="234928-ecrire-nos-programmes-python-dans-des-fichiers.html">Écrire nos programmes Python dans des fichiers</a>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="235020-distribuer-facilement-nos-programmes-python-avec-cx-freeze.html">Distribuer facilement nos programmes Python avec cx_Freeze</a>
+</li>
+<li class="selected">
+<span class="col-nav__chapterTitle">De bonnes pratiques</span>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="235342-pour-finir-et-bien-continuer.html">Pour finir et bien continuer</a>
+</li>
+</ol>
+</div>
+</div>
+<div class="col-nav__block col-nav__block--button">
+<a href="langage-python.html" class="button button--secondary">
+Accéder au forum
+</a>
+</div>
+<div class="col-nav__block col-nav__block--institution">
+<div class="col-nav__title">Créé par</div>
+<a href="openclassrooms.html" target="_blank" rel="nofollow">
+<span data-image-cdn-attr-src="235263-de-bonnes-pratiqueshttps://course.oc-static.com/partners/19/15433053814225_short-200x200.png" data-image-cdn-attr-alt="logo OpenClassrooms" data-image-cdn-width="165" data-image-cdn-attr-class="col-nav__institutionLogo"><img class="col-nav__institutionLogo" width="165" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></span>
+<p class="col-nav__block--institutionDescription">
+OpenClassrooms, Leading <span class='nowrap'>E-Learning<span> Platform in Europe
+</p>
+</a>
+</div>
+<div class="col-nav__block col-nav__block--institution">
+<div class="col-nav__title">Avec le soutien de</div>
+<a href="intech.html" target="_blank">
+<span data-image-cdn-attr-src="235263-de-bonnes-pratiqueshttps://course.oc-static.com/partners/7/15804863695308_logo%20vert%20baseline.png" data-image-cdn-attr-alt="logo IN&#039;TECH" data-image-cdn-width="165" data-image-cdn-attr-class="col-nav__institutionLogo"><img class="col-nav__institutionLogo" width="165" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></span>
+<p class="col-nav__block--institutionDescription">
+Devenez expert en ingénierie informatique
+</p>
+</a>
+</div>
+<div class="socialNetwork col-nav__block">
+<ul class="socialButtons  js-socialButtons" data-options="
+                title: 'De bonnes pratiques @OCFrance',
+        mailTitle: 'Cours &quot;De bonnes pratiques&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;De bonnes pratiques&quot; sur OpenClassrooms.'">
+<li>
+<a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter">
+<i class="roundIcon__icon  icon-twitter"></i>
+</a>
+</li>
+<li>
+<a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+<i class="roundIcon__icon  icon-facebook"></i>
+</a>
+</li>
+<li>
+<a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+<i class="roundIcon__icon  icon-letter"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</aside>
+</div>
+</div>
+</div>
+<footer id="course-footer" class="alt-section noMarginBottom">
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content  courseFooter">
+<div class="courseFooter__authors course-bottom__category">
+<div class="course-bottom__title">
+Le professeur
+</div>
+<div>
+<a itemprop="author" itemscope itemtype="http://schema.org/Person" href="prolixe-27218.html" class="no-underlined" rel="nofollow">
+<div class="course-bottom__text-illustrated">
+<span data-author="Vincent Le Goff" data-image-cdn-background-image="https://openclassrooms.com/bundles/common/images/avatar_defaut.png" data-image-cdn-width="120"></span>
+<div class="course-bottom__subtitle" itemprop="name">Vincent Le Goff</div>
+</div>
+</a>
+</div>
+</div>
+<div class="courseFooter__courseFormat course-bottom__category">
+<h2>Découvrez aussi ce cours en...</h2>
+<ul class="course-bottom__format">
+<li>
+<a href="apprenez-a-programmer-en-python-9791090085770?societe=openclassrooms.html" target="_blank" class="text-decoration-none">
+<div class="circle circle--x-small">
+ <span class="circle__content"></span>
+<i class="icon-book"></i>
+</div>
+<div class="course-bottom__format-entitled">
+Livre
+</div>
+</a>
+</li>
+<li>
+<a href="old-courses-pdf.html" class="text-decoration-none">
+<div class="circle circle--x-small">
+<span class="circle__content"></span>
+<i class="icon-pdf"></i>
+</div>
+<div class="course-bottom__format-entitled">
+PDF
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</article>
+</main>
+</div>
+<div id="mainSearchLegacy" class="mainSearch"></div>
+<div id="footerWrapper">
+<footer id="footer" class="oc-footerSkeleton">
+<hr style="margin-bottom: 8px" />
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="oc-footerSkeleton__container">
+<div class="oc-footerSkeleton__item">
+<div class="oc-footerSkeleton__itemTitle"><span class="skeleton" style="height: 20px; width: 80%"></span></div>
+<ul class="oc-footerSkeleton__linksList">
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 70%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 60%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 65%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+</ul>
+</div>
+<div class="oc-footerSkeleton__item">
+<div class="oc-footerSkeleton__itemTitle"><span class="skeleton" style="height: 20px; width: 85%"></span></div>
+<ul class="oc-footerSkeleton__linksList">
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 60%"></span></a></p>
+</li>
+</ul>
+</div>
+<div class="oc-footerSkeleton__item">
+<div class="oc-footerSkeleton__itemTitle"><span class="skeleton" style="height: 20px; width: 75%"></span></div>
+ <ul class="oc-footerSkeleton__linksList">
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 65%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 50%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+</ul>
+</div>
+<div class="oc-footerSkeleton__item">
+<span class="skeleton" style="height: 25px; width: 65%"></span>
+<div class="oc-footerSkeleton__socialButtonWrapper">
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+</div>
+<div><span class="skeleton skeleton--width50" style="height: 40px;"></span></div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div id="showDisclaimer" class="cookiesDisclaimer"></div>
+<script type="text/javascript">
+        function getConsentedSegmentIntegrations() {
+            // getCookie from https://www.w3schools.com/js/js_cookies.asp
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) === ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) === 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            var consent = getCookie('cmapi_cookie_privacy');
+
+            function isCookieAllowedByConsent(consent, level) {
+              return !!consent && consent.search(level) !== -1;
+            }
+
+            var isFunctionalCookieAllowed = isCookieAllowedByConsent(consent, 2);
+            var isAdvertisingCookieAllowed = isCookieAllowedByConsent(consent, 3);
+
+            var isAppCuesPremiumUser = false;
+
+            var isOnPoleEmploiPage = !!window && window.location.pathname.includes('partners/pole-emploi/offers');
+
+            return {
+                Amplitude: isFunctionalCookieAllowed,
+                'Bing Ads': isAdvertisingCookieAllowed,
+                'Google Ads': isAdvertisingCookieAllowed,
+                'Google Analytics': isFunctionalCookieAllowed,
+                'Zendesk': isFunctionalCookieAllowed,
+                Appcues: (isAppCuesPremiumUser || isOnPoleEmploiPage) && isFunctionalCookieAllowed,
+            };
+        }
+
+        var consentedSegmentIntegrations = getConsentedSegmentIntegrations();
+
+        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="235263-de-bonnes-pratiqueshttps://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+            window.loadAnalytics = function () { window.analytics.load('mou95e6tdn', {integrations: consentedSegmentIntegrations}) };
+        }}();
+    </script>
+<script>
+  var isPrerender = !!navigator.userAgent.match(/github\.com\/prerender\/prerender/);
+  var preRenderBrowserFakeUa = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163 Safari/537.36";
+  var polyfillUrl = "https://cdn.polyfill.io/v3/polyfill.min.js?unknown=polyfill&features=default,es6,IntersectionObserver,Object.values,Array.prototype.includes,Array.prototype.findIndex,Promise.prototype.finally,fetch,Intl.~locale.fr";
+
+    if (isPrerender) {
+    polyfillUrl+= "&ua=" + encodeURIComponent(preRenderBrowserFakeUa);
+  }
+
+  App.scripts.push(polyfillUrl);;
+
+  App.script = {
+    DASHBOARD: 'dashboard',
+    MENTORSHIP_STUDENT_DASHBOARD: 'mentorshipStudentdashboard',
+    SHOP: 'shop',
+    PAYMENT: 'payment',
+    PROJECTS: 'projects',
+    TEAM: 'team',
+    HOME: 'home',
+    COURSE_EDIT: 'course_edit',
+    COURSE_VIEW: 'course_view',
+    ADMIN: 'admin',
+    ADMIN_STUDENT_CREDENTIAL_CREATE: 'adminStudentCredentialCreate',
+    POST_A_JOB: 'postAJob',
+    GIG_WORKERS: 'gigWorkers',
+    JOB_GUARANTEE: 'jobGuarantee',
+    JOB_SURVEY: 'jobSurvey',
+    MCQ_EDIT: 'mcqEdit',
+    MCQ_VIEW: 'mcqView',
+    MENTOR_EDIT: 'mentorEdit',
+    MENTORSHIP_DASHBOARD: 'mentorshipDashboard',
+    MENTORSHIP_SESSION_CREATE: 'mentorshipSessionCreate',
+    MENTORSHIP_SESSION_NON_ASSESSOR_CREATE: 'mentorshipSessionNonAssessorCreate',
+    PATHS: 'paths',
+    PRIVATE_CONVERSATIONS: 'privateConversations',
+    USER_PROFILE: 'userProfile',
+    WELCOME: 'welcome',
+    APPRENTICESHIP: 'apprenticeship',
+    WEBAPP: 'webapp',
+    PROJECTS_ADMIN: 'projectsAdmin',
+    SECURITY: 'security',
+  };
+</script>
+<script>App.scripts.push("/js/runtime.2b0db2a1a4f4ea6dcc32.js");</script>
+<script>App.scripts.push("/js/vendors.70ee40825d0836d87858.js");</script>
+<script>App.scripts.push("/js/oc/packages/main.0fcba3e3d846ab6f580c.js");</script>
+
+<script>App.scriptToLoad = App.script.COURSE_VIEW</script>
+
+<script>
+    (function () {
+        function loadScripts(cb) {
+            App.scripts.forEach(function (src, index) {
+                var script = document.createElement('script');
+                script.src = src;
+                script.async = false;
+                document.body.appendChild(script);
+
+                if (cb && index === App.scripts.length - 1) {
+                    script.onload = cb;
+                }
+            });
+        }
+
+        function boot() {
+            loadScripts(function () {
+                if (App.modules) {
+                    App.modules.startAll();
+                }
+            });
+        }
+
+        if (window.addEventListener) {
+            window.addEventListener('load', boot, false);
+        } else if (window.attachEvent) {
+            window.attachEvent('onload', boot);
+        } else {
+            window.onload = boot;
+        }
+    }());
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"90dc06697a","applicationID":"20302107","transactionName":"NANaYkJXC0ICAhdYVw1Je0NDQgpcTA4AblsPB1FEVWkGXhYTEFRnEwdKQm9GBEMXPhVYXRQ=","queueTime":0,"applicationTime":365,"atts":"GERZFApNGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

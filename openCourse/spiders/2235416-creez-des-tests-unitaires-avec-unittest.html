@@ -1,0 +1,1179 @@
+
+<!DOCTYPE html>
+<html class="no-js " lang="fr" prefix="og: http://ogp.me/ns#">
+<head>
+<title>
+                            Créez des tests unitaires avec unittest - Apprenez à programmer en Python - OpenClassrooms
+                    </title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"90dc06697a",applicationID:"20302107"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="2235416-creez-des-tests-unitaires-avec-unittesthttps://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1173.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="application-name" content="OpenClassrooms" />
+<meta name="msapplication-TileColor" content="#7451eb" />
+<meta name="msapplication-TileImage" content="/fav-icon.png?v=3" />
+<meta name="theme-color" content="#7451eb">
+<meta property="og:locale" content="fr" />
+<link rel="icon" sizes="144x144" href="2235416-creez-des-tests-unitaires-avec-unittest/fav-icon.png?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3.html" />
+<link rel="apple-touch-icon" href="apple-touch-icon-iphone.png?v=3.html" />
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png?v=3.html" />
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone-retina-display.png?v=3.html" />
+<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-ipad-retina-display.png?v=3.html" />
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png?v=3.html" />
+<link rel="shortcut icon" href="2235416-creez-des-tests-unitaires-avec-unittest/favicon.ico?4a234d5" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+          window.dataLayer = window.dataLayer || [];
+
+          (function(a,s,y,n,c,h,i,d,e){
+            var isEnabled = [
+              /\/paths/,
+              /\/apprenticeship/,
+              /\/employer/,
+            ].reduce(function (acc, pathReg) {
+                var matchUrl = !!document.location.pathname.match(pathReg);
+                return acc || matchUrl;
+            }, false);
+
+            if (!isEnabled) {
+              return;
+            }
+
+            s.className+=' '+y;
+            h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+            (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+          })(window,document.documentElement,'async-hide','dataLayer',2000,{'GTM-5WM9PV':true});
+        </script>
+<link href="2235416-creez-des-tests-unitaires-avec-unittest/bundles/common/css/master-30373b45.css" type="text/css" rel="stylesheet" media="all" />
+<link href="2235416-creez-des-tests-unitaires-avec-unittest/bundles/course/css/main-e895f7b3.css" type="text/css" rel="stylesheet" media="all" />
+<link href="2235416-creez-des-tests-unitaires-avec-unittesthttps://vjs.zencdn.net/6.2.5/video-js.css" rel="stylesheet">
+<script>
+    /*! modernizr 3.3.1 (Custom Build) | MIT *
+    * https://modernizr.com/download/?-cssfilters-touchevents-setclasses !*/
+    !function(e,n,t){function o(e,n){return typeof e===n}function r(){var e,n,t,r,s,i,a;for(var l in C)if(C.hasOwnProperty(l)){if(e=[],n=C[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(r=o(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],a=i.split("."),1===a.length?Modernizr[a[0]]=r:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=r),g.push((r?"":"no-")+a.join("-"))}}function s(e){var n=w.className,t=Modernizr._config.classPrefix||"";if(x&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(o,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),x?w.className.baseVal=n:w.className=n)}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):x?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function a(){var e=n.body;return e||(e=i(x?"svg":"body"),e.fake=!0),e}function l(e,t,o,r){var s,l,u,f,p="modernizr",c=i("div"),d=a();if(parseInt(o,10))for(;o--;)u=i("div"),u.id=r?r[o]:p+(o+1),c.appendChild(u);return s=i("style"),s.type="text/css",s.id="s"+p,(d.fake?d:c).appendChild(s),d.appendChild(c),s.styleSheet?s.styleSheet.cssText=e:s.appendChild(n.createTextNode(e)),c.id=p,d.fake&&(d.style.background="",d.style.overflow="hidden",f=w.style.overflow,w.style.overflow="hidden",w.appendChild(d)),l=t(c,e),d.fake?(d.parentNode.removeChild(d),w.style.overflow=f,w.offsetHeight):c.parentNode.removeChild(c),!!l}function u(e,n){return!!~(""+e).indexOf(n)}function f(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function p(e,n){return function(){return e.apply(n,arguments)}}function c(e,n,t){var r;for(var s in e)if(e[s]in n)return t===!1?e[s]:(r=n[e[s]],o(r,"function")?p(r,t||n):r);return!1}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function m(n,o){var r=n.length;if("CSS"in e&&"supports"in e.CSS){for(;r--;)if(e.CSS.supports(d(n[r]),o))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];r--;)s.push("("+d(n[r])+":"+o+")");return s=s.join(" or "),l("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==getComputedStyle(e,null).position})}return t}function h(e,n,r,s){function a(){p&&(delete k.style,delete k.modElem)}if(s=o(s,"undefined")?!1:s,!o(r,"undefined")){var l=m(e,r);if(!o(l,"undefined"))return l}for(var p,c,d,h,v,y=["modernizr","tspan","samp"];!k.style&&y.length;)p=!0,k.modElem=i(y.shift()),k.style=k.modElem.style;for(d=e.length,c=0;d>c;c++)if(h=e[c],v=k.style[h],u(h,"-")&&(h=f(h)),k.style[h]!==t){if(s||o(r,"undefined"))return a(),"pfx"==n?h:!0;try{k.style[h]=r}catch(g){}if(k.style[h]!=v)return a(),"pfx"==n?h:!0}return a(),!1}function v(e,n,t,r,s){var i=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+j.join(i+" ")+i).split(" ");return o(n,"string")||o(n,"undefined")?h(a,n,r,s):(a=(e+" "+E.join(i+" ")+i).split(" "),c(a,n,t))}function y(e,n,o){return v(e,t,t,n,o)}var g=[],C=[],S={_version:"3.3.1",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){C.push({name:e,fn:n,options:t})},addAsyncTest:function(e){C.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=S,Modernizr=new Modernizr;var w=n.documentElement,x="svg"===w.nodeName.toLowerCase(),_=S._config.usePrefixes?" -webkit- -moz- -o- -ms- ".split(" "):["",""];S._prefixes=_;var b="CSS"in e&&"supports"in e.CSS,T="supportsCSS"in e;Modernizr.addTest("supports",b||T);var z=S.testStyles=l;Modernizr.addTest("touchevents",function(){var t;if("ontouchstart"in e||e.DocumentTouch&&n instanceof DocumentTouch)t=!0;else{var o=["@media (",_.join("touch-enabled),("),"heartz",")","{#modernizr{top:9px;position:absolute}}"].join("");z(o,function(e){t=9===e.offsetTop})}return t});var P="Moz O ms Webkit",j=S._config.usePrefixes?P.split(" "):[];S._cssomPrefixes=j;var E=S._config.usePrefixes?P.toLowerCase().split(" "):[];S._domPrefixes=E;var N={elem:i("modernizr")};Modernizr._q.push(function(){delete N.elem});var k={style:N.elem.style};Modernizr._q.unshift(function(){delete k.style}),S.testAllProps=v,S.testAllProps=y,Modernizr.addTest("cssfilters",function(){if(Modernizr.supports)return y("filter","blur(2px)");var e=i("a");return e.style.cssText=_.join("filter:blur(2px); "),!!e.style.length&&(n.documentMode===t||n.documentMode>9)}),r(),s(g),delete S.addTest,delete S.addAsyncTest;for(var A=0;A<Modernizr._q.length;A++)Modernizr._q[A]();e.Modernizr=Modernizr}(window,document);
+    </script>
+<script type="text/javascript">
+    var App = {
+        startTime: (new Date()).getTime(),
+        pageGenerationDate: 1596805607000
+    };
+
+    App.user = {
+                    locale: 'fr',
+            language: 'fr',
+            country: 'BJ',
+            isPremium: false,
+            isMentor: false,
+            anonymous: true
+            };
+
+    App.preferences = {
+        debug: false,
+        assetVersion: '4a234d5',
+        contactMail: 'hello\u0040openclassrooms.com',
+        contactPhone: '\u002B33\u00201\u002080\u002088\u002080\u002030',
+        phoneNumbersByCountry: {"uk":{"contact":"+44 16 1768 1880"},"ca":{"contact":"+1 929-376-0101"},"us":{"contact":"+1 929-376-0101"},"fr":{"contact":"+33 1 80 88 80 30","b2b_contact":"+33 1 80 88 80 40"},"es":{"contact":"+33 1 80 88 80 30"}},
+        adyenPublicKey: '10001\u007C889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+        cdnImage: true,
+        layer: {
+            appId: 'layer\u003A\/\/\/apps\/staging\/7757c53a\u002Db2ba\u002D11e5\u002Db2a6\u002D2584730b1501',
+            identityProviderUrl: '\/ajax\/conversations\/get\u002Didentity\u002Dtoken'
+        },
+        algolia: {
+            appId: 'JGRXRFVQM0',
+            apiKey: 'cd1e2696005d97e99dc7b882297b09cf',
+            indexName: 'prod_v2_COURSES_fr'
+        },
+        google: {
+            appId: '132418960718\u002Djdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com',
+            maps: {
+                apiKey: 'AIzaSyDQKLz54HFMtUf9Yo8cWkgR8Af3eU2HAiE'
+            },
+        },
+        application: {
+            form: {
+              funnelUrl: 'https\u003A\/\/www.tfaforms.com\/responses\/processor',
+              fields: {"firstname":"tfa_6","lastname":"tfa_4","email":"tfa_2","path_id":"tfa_138","source_name":"tfa_165","consent":"tfa_150","user_locale":"tfa_125","userId":"tfa_3","gender":"tfa_10","user_study_motivation":"tfa_171","diploma_level":"tfa_30","user_diploma":"tfa_173","language_proficiency_fr":"tfa_40","language_proficiency_en":"tfa_42","ha_addressline_1":"tfa_16","ha_city":"tfa_18","ha_zip_code":"tfa_24","ha_state":"tfa_163","ha_country":"tfa_22","professional_status":"tfa_94","public_employment_agency_id":"tfa_159","user_public_employment_agency_certificate":"tfa_167","user_pe_advisor_email":"tfa_199","disabled_worker":"tfa_67","veteran":"tfa_73","athlete":"tfa_79","refugee":"tfa_85","rsa":"tfa_91","are":"tfa_175","api":"tfa_177","cui":"tfa_179","can_work_in_france":"tfa_142","user_resume":"tfa_1","online_cv":"tfa_157","user_has_mobility":"tfa_193","user_mobility_departamental":"tfa_187","user_mobility_national":"tfa_189","user_mobility_regional":"tfa_191","user_mobility_cities":"tfa_195","work_location_1":"tfa_128","work_location_2":"tfa_130","work_location_3":"tfa_132","work_location_4":"tfa_134","work_location_5":"tfa_136","career_motivation":"tfa_123","has_computer":"tfa_43","has_mic":"tfa_49","has_webcam":"tfa_169","has_fast_internet_connection":"tfa_55","has_quiet_space":"tfa_61","has_online_courses_xp":"tfa_118","has_online_courses_xp_text":"tfa_121","found_a_company":"tfa_146","date_of_birth":"tfa_9","phone_number":"tfa_126","user_desired_start_date":"tfa_161","tfa_dbFormId":"tfa_dbFormId","tfa_dbControl":"tfa_dbControl"}
+            },
+        },
+        facebook: {
+            appId: '277769842283905',
+        },
+        apple: {
+          appId: 'com.openclassrooms.apple\u002Dsign\u002Din',
+        },
+        routes: {
+            COURSE_EVENT: '/components/courses/:courseId',
+            COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+            ACCEPT_COOKIE: '\/ajax\/components\/user\u002Daccept\u002Dconsent\u002Dcookie'
+        },
+
+                    };
+
+    App.preferences.navigationPreference = {
+            };
+
+    App.preferences.modules = {
+        'smiley': {
+            basePath: '/bundles/common/images/smiley/'
+        }
+    };
+
+    try {
+        App.api = JSON.parse("\u007B\u0022anonymous\u0022\u003A\u007B\u0022client_id\u0022\u003A\u0022807605274673228623802113\u0022,\u0022client_secret\u0022\u003A\u00221\u0022\u007D,\u0022logged\u0022\u003A\u007B\u0022client_id\u0022\u003A\u00227xPFDY3bB3ruX44z\u0022\u007D,\u0022urls\u0022\u003A\u007B\u0022authorize\u0022\u003A\u0022https\u003A\\\/\\\/openclassrooms.com\\\/oauth2\\\/authorize\u0022,\u0022root\u0022\u003A\u0022https\u003A\\\/\\\/api.openclassrooms.com\u0022,\u0022proxy\u0022\u003A\u0022\u0022\u007D\u007D");
+    } catch (e) {
+        App.api = {};
+    }
+
+    App.notifications = {};
+    App.scripts = [];
+
+    if (App.user.id) {
+        (function(){
+            var userData = { userId: App.user.id };
+
+            if (App.user.premiumType) {
+                userData.status = (App.user.premiumType === 'Premium Solo') ? 'premium solo student' : 'path student';
+            } else {
+                userData.status = 'free student';
+            }
+
+            if (App.user.isMentor) {
+                userData.status = App.user.premiumType ? (userData.status + '|mentor') : 'mentor';
+            }
+
+            if (!window.dataLayer) {
+              return;
+            }
+            window.dataLayer.push(userData);
+        })();
+    }
+</script>
+<script>    
+    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":2235416,"partTitle":"Cr\u00e9ez des tests unitaires avec unittest","partSlug":"les-tests-unitaires-avec-unittest","courseId":235344,"courseTitle":"Apprenez \u00e0 programmer en Python","courseSlug":"apprenez-a-programmer-en-python","courseLanguage":"fr","isIntroduction":false,"isCertifying":true};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Créez des tests unitaires avec unittest" />
+<meta property="og:url" content="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/2235416-creez-des-tests-unitaires-avec-unittest" />
+<meta property="og:site_name" content="OpenClassrooms" />
+<meta property="og:image" content="https://course.oc-static.com/courses/0/235344.png" />
+<meta property="og:description" content="Python est un langage de programmation qui se veut simple, concis et lisible. On l&#039;utilise aussi bien pour créer des scripts que des programmes ou des sites web. Il est très populaire, notamment chez Google." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@OCFrance" />
+<meta name="twitter:title" content="Créez des tests unitaires avec unittest" />
+<meta name="twitter:image" content="https://course.oc-static.com/courses/0/235344.png" />
+<meta name="twitter:description" content="Python est un langage de programmation qui se veut simple, concis et lisible. On l&#039;utilise aussi bien pour créer des scripts que des programmes ou des sites web. Il est très populaire, notamment chez Google." />
+<link rel="canonical" href="2235416-creez-des-tests-unitaires-avec-unittest.html" />
+</head>
+<body class="course oc-body   breadcrumbFluid breadcrumbOnContrasted">
+<ul class="skipLink">
+<li>
+<a class="skipLink__item" href="#mainContent.html">Aller au contenu</a>
+</li>
+<li>
+<a class="skipLink__item" href="#footerChangeLanguage.html">Choisir la langue</a>
+</li>
+<li id="skipLink_search">
+<a class="skipLink__item" href="#algolia-search-input.html">Aller à la recherche</a>
+</li>
+</ul>
+<script id="_EVENTS-IDENTIFY" type="application/json">
+        </script>
+<script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page","integrations":{"Blueshift":false,"HubSpot":false},"properties":{"pageCategory":"courses","courseTitle":"Apprenez \u00e0 programmer en Python"}}
+    </script>
+<div id="predictiveCrmTopBanner"></div>
+<script id="fundingMechanisms" type="application/json">
+    {
+        "fundingMechanisms": []
+    }
+</script>
+<div id="oc-header">
+<div class="oc-mainHeader oc-mainHeader--notLogged oc-mainHeader--skeleton">
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div style="display: flex;">
+<div class="oc-mainHeaderLogo oc-mainHeaderLogo--skeleton">
+<a href="fr.html" class="oc-mainHeaderLogo__link">
+<svg fill="none" height="51" width="668" viewBox="0 0 668 51" xmlns="http://www.w3.org/2000/svg">
+<title>OpenClassrooms.com</title>
+<path d="M406.011 35.018c0 2.82-.71 5.641-2.368 7.991-1.659 2.35-3.79 4.23-6.87 5.64-3.079 1.41-6.869 2.116-11.37 2.116-3.79 0-7.343-.47-10.897-1.41-3.553-.94-6.395-2.35-8.527-3.996l7.106-8.46c1.421.705 2.843 1.175 4.501 1.88 2.842.94 5.448 1.41 8.054 1.41 4.974 0 7.58-1.41 7.58-3.995 0-1.41-.711-2.35-2.132-3.056-1.421-.705-3.79-1.41-6.87-2.115-3.553-.705-6.395-1.645-8.764-2.585s-4.264-2.35-6.159-4.23c-1.658-1.88-2.606-4.701-2.606-7.991 0-3.056.711-5.641 2.369-7.991 1.658-2.35 3.79-4.23 6.87-5.64 3.079-1.41 6.869-2.116 11.37-2.116 3.079 0 6.159.47 9.001 1.175 3.08.705 5.685 1.88 7.817 3.055l-7.343 8.696c-3.316-1.41-6.633-2.115-9.712-2.115-2.606 0-4.501.47-5.685 1.175-1.185.705-1.895 1.88-1.895 3.056 0 1.41.711 2.35 2.132 2.82 1.421.705 3.79 1.41 6.869 2.115a49.4 49.4 0 0 1 8.765 2.585c2.369.94 4.264 2.35 6.159 4.23 1.658 1.646 2.605 4.466 2.605 7.756zm261.989 0c0 2.82-.711 5.641-2.369 7.991s-3.79 4.23-6.869 5.64c-3.08 1.41-6.87 2.116-11.371 2.116-3.79 0-7.343-.47-10.896-1.41s-6.396-2.35-8.528-3.996l7.107-8.46c1.421.705 2.842 1.175 4.501 1.88 2.842.94 5.448 1.41 8.053 1.41 4.975 0 7.581-1.41 7.581-3.995 0-1.41-.711-2.35-2.132-3.056-1.422-.705-3.791-1.41-6.87-2.115a49.361 49.361 0 0 1-8.764-2.585c-2.369-.94-4.264-2.35-6.159-4.23-1.658-1.88-2.606-4.701-2.606-7.991 0-3.056.711-5.641 2.369-7.991 1.658-2.35 3.79-4.23 6.869-5.64 3.08-1.41 6.87-2.116 11.371-2.116 3.079 0 6.158.47 9.001 1.175 3.079.705 5.685 1.88 7.817 3.055l-7.343 8.696c-3.317-1.41-6.633-2.115-9.712-2.115-2.606 0-4.501.47-5.685 1.175-1.185.705-1.896 1.88-1.896 3.056 0 1.41.711 2.35 2.132 2.82 1.422.705 3.791 1.41 6.87 2.115a49.361 49.361 0 0 1 8.764 2.585c2.369.94 4.264 2.35 6.159 4.23 1.895 1.646 2.606 4.466 2.606 7.756zM87.882 19.037c0 3.76-.947 6.816-2.605 9.4-1.659 2.586-4.027 4.701-7.107 6.111s-6.87 2.116-10.896 2.116H59.22v12.69H45.955V.706h21.319c4.264 0 7.817.705 10.896 2.115 3.08 1.41 5.448 3.526 7.107 6.346 1.895 3.055 2.605 6.346 2.605 9.87zm-13.265 0c0-2.35-.71-3.995-2.132-5.17s-3.316-1.88-6.159-1.88h-7.343v14.336h7.343c2.606 0 4.738-.706 6.16-1.88s2.131-3.056 2.131-5.406zm55.904 20.212v10.576h-37.19V1.175h36.242v10.576h-23.214v8.226h18.476v10.341h-18.476v8.93zm50.218-38.074v48.65h-10.896l-20.609-25.853v25.853h-13.028V1.175h10.896l20.609 25.853V1.175zm84.092 37.604v10.81h-32.926V.94h13.265v37.604h19.661zm56.851 11.046h-13.739l-3.553-9.401h-19.661l-3.553 9.4h-13.502l20.608-48.649h13.029zM300.6 30.083l-5.922-15.512-5.922 15.512zm62.536 4.935c0 2.82-.71 5.641-2.369 7.991-1.658 2.35-3.79 4.23-6.869 5.64-3.08 1.41-6.87 2.116-11.37 2.116-3.79 0-7.344-.47-10.897-1.41s-6.396-2.35-8.527-3.996l7.106-8.46c1.421.705 2.842 1.175 4.501 1.88 2.842.94 5.448 1.41 8.054 1.41 4.974 0 7.58-1.41 7.58-3.995 0-1.41-.711-2.35-2.132-3.056-1.421-.705-3.79-1.41-6.87-2.115-3.553-.705-6.395-1.645-8.764-2.585s-4.264-2.35-6.159-4.23c-1.658-1.88-2.606-4.701-2.606-7.991 0-3.056.711-5.641 2.369-7.991 1.658-2.35 3.79-4.23 6.87-5.64 3.079-1.41 6.869-2.116 11.37-2.116 3.079 0 6.159.47 9.001 1.175 3.08.705 5.448 1.88 7.817 3.055l-7.343 8.696c-3.316-1.41-6.633-2.115-9.712-2.115-2.606 0-4.501.47-5.685 1.175-1.185.705-1.895 1.88-1.895 3.056 0 1.41.71 2.35 2.132 2.82 1.421.705 3.79 1.41 6.869 2.115a49.4 49.4 0 0 1 8.765 2.585c2.368.94 4.263 2.35 6.158 4.23 1.659 1.646 2.606 4.466 2.606 7.756zm-322.63-9.636c0 13.867-11.37 25.383-25.583 25.383-5.685 0-10.66-1.88-14.923-4.936l8.528-10.105c1.895 1.175 4.027 1.88 6.395 1.88 6.633 0 12.081-5.406 12.081-11.986 0-6.581-5.448-11.987-12.08-11.987-2.37 0-4.501.705-6.396 1.88L0 5.407C4.264 2.35 9.475.47 14.923.47 29.136.235 40.506 11.516 40.506 25.383zm177.66 10.341l8.528 10.107c-4.264 3.055-9.476 4.935-14.924 4.935-13.976 0-25.583-11.281-25.583-25.383C186.187 11.517 197.557 0 211.77 0c5.685 0 10.66 1.88 14.924 4.936l-8.528 10.105c-1.895-1.175-4.027-1.88-6.396-1.88-6.632 0-12.081 5.406-12.081 11.986 0 6.581 5.449 11.987 12.081 11.987 2.369.47 4.501-.235 6.396-1.41zm236.169 14.102l-10.423-15.042c3.079-1.41 5.211-3.525 6.87-6.11 1.658-2.585 2.605-5.876 2.605-9.401 0-3.76-.947-6.816-2.605-9.636-1.659-2.82-4.027-4.7-7.107-6.346-3.079-1.41-6.869-2.115-10.896-2.115H411.46v48.65h13.028V37.134h6.159l8.764 12.69zm-29.847-37.839h7.58c2.606 0 4.738.705 6.159 1.88s2.132 3.056 2.132 5.17c0 2.351-.711 3.996-2.132 5.171s-3.316 1.88-6.159 1.88h-7.58zM483.945.235c13.976 0 25.583 11.281 25.583 25.382S498.157 51 483.945 51c-13.976 0-25.583-11.281-25.583-25.383S469.732.235 483.945.235zm-13.029 25.147c0 7.051 5.685 12.692 12.792 12.692 7.106 0 12.791-5.64 12.791-12.692s-5.685-12.69-12.791-12.69c-6.87 0-12.792 5.64-12.792 12.69zM538.901.235c13.976 0 25.583 11.281 25.583 25.382S553.114 51 538.901 51c-13.976 0-25.583-11.281-25.583-25.383S524.925.235 538.901.235zm-12.792 25.147c0 7.051 5.685 12.692 12.792 12.692 7.106 0 12.791-5.64 12.791-12.692s-5.685-12.69-12.791-12.69c-7.107 0-12.792 5.64-12.792 12.69zm70.353 6.816L580.828 1.175h-10.896v48.65h11.607V28.438l11.607 21.387h6.87l11.607-21.387v21.387h11.607V1.175h-10.897z" />
+</svg>
+</a>
+</div>
+<nav class="oc-mainHeader__navWrapper" role="navigation" aria-label="Menu principal">
+<div class="oc-mainHeader__linksWrapper">
+<div class="oc-mainHeader__navLinkWrapper"><a class="oc-mainHeader__navLink" data-event="click|Header|Paths" href="paths.html">Parcours</a></div>
+<div class="oc-mainHeader__navLinkWrapper"><a class="oc-mainHeader__navLink" data-event="click|Header|Courses" href="courses.html">Cours</a></div>
+<div class="oc-mainHeader__navLinkWrapper--separator"></div>
+<div class="oc-mainHeader__navLinkWrapper"><a class="oc-mainHeader__navLink" data-event="click|Header|Business" href="business.html">Business</a></div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--[if lt IE 10]>
+<div class="alertMessage">
+    <span class="bullet bullet--small bullet--orange alertMessage__icon"> <i class="icon-exclamation"></i></span>
+    <p class="alertMessage__text">
+        Vous utilisez un navigateur obsolète, veuillez le <a href="update.html.html">mettre à jour</a>.
+    </p>
+</div>
+<![endif]-->
+
+<div id="ie-ten-disclaimer" class="alertMessage" style="display:none">
+<span class="bullet bullet--small bullet--orange alertMessage__icon"> <i class="icon-exclamation"></i></span>
+<p class="alertMessage__text">
+Vous utilisez un navigateur obsolète, veuillez le <a href="update.html.html">mettre à jour</a>.
+</p>
+</div>
+<script>
+  if (document.documentMode === 10) {
+    document.getElementById('ie-ten-disclaimer').style.display = 'block';
+  }
+</script>
+
+<noscript>
+    <div class="alertMessage">
+        <span class="bullet bullet--small bullet--orange alertMessage__icon"> <i class="icon-exclamation"></i></span>
+        <p class="alertMessage__text">
+            Veuillez utiliser un <a href="update.html.html">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+        </p>
+    </div>
+</noscript>
+<div id="mainContentWithHeader">
+<section class="breadcrumb  inset no-padding">
+<div class="grid-wrapper">
+<div class="grid-inner">
+<nav class="breadcrumb__wrapper" role="navigation" aria-label="Fil d&#039;Ariane">
+<ul class="breadcrumb__trail">
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a class="breadcrumb__link" href=".html" itemprop="url">
+<span itemprop="title">Accueil</span
+                                    ></a>
+<span class="breadcrumb__separator"> > </span>
+</li>
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a class="breadcrumb__link" href="courses.html" itemprop="url">
+<span itemprop="title">Cours</span
+                                    ></a>
+<span class="breadcrumb__separator"> > </span>
+</li>
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a class="breadcrumb__link" href="235344-apprenez-a-programmer-en-python?status=published.html" itemprop="url">
+<span itemprop="title">Apprenez à programmer en Python</span
+                                    ></a>
+<span class="breadcrumb__separator"> > </span>
+</li>
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+Créez des tests unitaires avec unittest
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</section>
+<div id="pre-main-part">
+</div>
+<main class="claire clearfix" role="main" id="mainContent">
+<article itemscope itemtype="http://schema.org/Article" lang="fr">
+<header id="course-header" class="courseHeader" xmlns="http://www.w3.org/1999/html">
+<div class="grid-wrapper"><div class="grid-inner"><div class="grid-inner-content"><div class="courseHeader__topPart"><a itemprop="url" href="/fr/courses/235344-apprenez-a-programmer-en-python"><h1 class="oc-typography-h2 typoColorOnContrastedBg  courseHeader__title" data-course-title="Apprenez à programmer en Python">Apprenez à programmer en Python</h1></a></div></div></div></div><div class="grid-wrapper"><div class="grid-inner"><div class="grid-inner-content"><div class="courseHeader__bottomPart"><div class="courseHeader__details"><div class="courseHeader__detailsGroup"><ul class="courseHeader__detailsList"><li class="courseHeader__detailsItem"><img class="courseHeader__icon js-tooltip" src="/images/icons/schedule.svg?4a234d5" width="16" title="Ce cours demande en moyenne 40 heures de travail pour être réussi." /><span class="courseHeader__label">40 heures</span></li><li class="courseHeader__detailsItem"><i class="icon-level courseHeader__icon"></i><span class="courseHeader__label">Difficile</span></li></ul></div><div class="courseHeader__detailsGroup courseHeader--license"><a class="courseHeader__license" target="_blank" href="2.0.html"><span class="courseHeader__label">Licence</span><ul class="courseHeader__detailsList"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccnc iconBar__icon" title="NC"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+<div id="popin-formats-availables" class="popin popin--course-formats-availables">
+<i class="popin__close-button icon-close js-close-button"></i>
+<div class="course-types course-types--withSpace">
+<a class="course-types__item" href="235344-apprenez-a-programmer-en-python.html">
+<i class="icon-desktop course-types__icon"></i>
+</a>
+<a class="course-types__item" href="apprenez-a-programmer-en-python-9791090085770?societe=openclassrooms.html">
+<i class="icon-book course-types__icon"></i>
+</a>
+<a class="course-types__item" href="certificate_example.html" target="_blank">
+<i class="icon-badge course-types__icon js-close-button"></i>
+</a>
+</div>
+<p>Ce cours est visible <a href="235344-apprenez-a-programmer-en-python.html">gratuitement en ligne</a>.</p>
+<p>
+Ce cours existe en livre papier.
+</p>
+<p>
+course.header.alt.is_certifying
+</p>
+<a class="button button--primary js-close-button" href="#.html">J&#039;ai tout compris !</a>
+</div>
+</header>
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content">
+<p class="courseHeader__updatedTime">
+Mis à jour le 23/06/2020 </p>
+</div>
+</div>
+</div>
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content">
+<nav id="course-timeline" class="timeline">
+<div class="timeline__inner">
+<span class="timeline__iconContainer">
+<a href="235344-apprenez-a-programmer-en-python.html" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+<i class="icon-home roundIcon__icon"></i>
+</a>
+</span>
+<div class="timeline__steps">
+<span class="timeline__splitChapter"></span>
+<a href="230659-decouvrez-python.html" class="timeline__step" title="Découvrez Python">
+<span class="timeline__stepName">
+Découvrez Python
+</span>
+</a>
+<a href="230722-faites-vos-premiers-pas-avec-linterpreteur-de-commandes-python.html" class="timeline__step" title="Faites vos premiers pas avec l&#039;interpréteur de commandes Python">
+<span class="timeline__stepName">
+Faites vos premiers pas avec l&#039;interpréteur de commandes Python
+</span>
+</a>
+<a href="230957-entrez-dans-le-monde-merveilleux-des-variables.html" class="timeline__step" title="Entrez dans le monde merveilleux des variables">
+<span class="timeline__stepName">
+Entrez dans le monde merveilleux des variables
+</span>
+</a>
+ <a href="231174-creez-des-structures-conditionnelles.html" class="timeline__step" title="Créez des structures conditionnelles">
+<span class="timeline__stepName">
+Créez des structures conditionnelles
+</span>
+</a>
+<a href="231260-apprenez-a-faire-des-boucles.html" class="timeline__step" title="Apprenez à faire des boucles">
+<span class="timeline__stepName">
+Apprenez à faire des boucles
+</span>
+</a>
+<a href="231442-avancez-pas-a-pas-vers-la-modularite-1-2.html" class="timeline__step" title="Avancez pas à pas vers la modularité (1/2)">
+<span class="timeline__stepName">
+Avancez pas à pas vers la modularité (1/2)
+</span>
+</a>
+<a href="231571-avancez-pas-a-pas-vers-la-modularite-2-2.html" class="timeline__step" title="Avancez pas à pas vers la modularité (2/2)">
+<span class="timeline__stepName">
+Avancez pas à pas vers la modularité (2/2)
+</span>
+</a>
+<a href="231688-gerez-les-exceptions.html" class="timeline__step" title="Gérez les exceptions">
+<span class="timeline__stepName">
+Gérez les exceptions
+</span>
+</a>
+<a href="231735-tp-tous-au-zcasino.html" class="timeline__step" title="TP : tous au ZCasino">
+<span class="timeline__stepName">
+TP : tous au ZCasino
+</span>
+</a>
+<a href="178.html" class="timeline__step" title="Quiz : Comprenez les bases du langage Python">
+<span class="timeline__stepName">
+Quiz : Comprenez les bases du langage Python
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="231888-creez-votre-premier-objet-les-chaines-de-caracteres.html" class="timeline__step" title="Créez votre premier objet : les chaînes de caractères">
+<span class="timeline__stepName">
+Créez votre premier objet : les chaînes de caractères
+</span>
+</a>
+<a href="232026-creez-des-listes-et-des-tuples-1-2.html" class="timeline__step" title="Créez des listes et des tuples (1/2)">
+<span class="timeline__stepName">
+Créez des listes et des tuples (1/2)
+</span>
+</a>
+<a href="232143-creez-des-listes-et-des-tuples-2-2.html" class="timeline__step" title="Créez des listes et des tuples (2/2)">
+<span class="timeline__stepName">
+Créez des listes et des tuples (2/2)
+</span>
+</a>
+<a href="232273-utilisez-des-dictionnaires.html" class="timeline__step" title="Utilisez des dictionnaires">
+<span class="timeline__stepName">
+Utilisez des dictionnaires
+</span>
+</a>
+<a href="232431-utilisez-des-fichiers.html" class="timeline__step" title="Utilisez des fichiers">
+<span class="timeline__stepName">
+Utilisez des fichiers
+</span>
+</a>
+ <a href="232520-decouvrez-la-portee-des-variables-et-les-references.html" class="timeline__step" title="Découvrez la portée des variables et les références">
+<span class="timeline__stepName">
+Découvrez la portée des variables et les références
+</span>
+</a>
+<a href="232565-tp-realisez-un-bon-vieux-pendu.html" class="timeline__step" title="TP : Réalisez un bon vieux pendu">
+<span class="timeline__stepName">
+TP : Réalisez un bon vieux pendu
+</span>
+</a>
+<a href="179.html" class="timeline__step" title="Quiz : Maîtriser les règles de base du langage Python">
+<span class="timeline__stepName">
+Quiz : Maîtriser les règles de base du langage Python
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="232721-apprehendez-les-classes.html" class="timeline__step" title="Appréhendez les classes">
+<span class="timeline__stepName">
+Appréhendez les classes
+</span>
+</a>
+<a href="232793-definissez-des-proprietes.html" class="timeline__step" title="Définissez des propriétés">
+<span class="timeline__stepName">
+Définissez des propriétés
+</span>
+</a>
+<a href="233046-appliquez-des-methodes-speciales.html" class="timeline__step" title="Appliquez des méthodes spéciales">
+<span class="timeline__stepName">
+Appliquez des méthodes spéciales
+</span>
+</a>
+<a href="2233523-appliquez-deux-methodes-de-tri-en-python.html" class="timeline__step" title="Appliquez deux méthodes de tri en Python">
+<span class="timeline__stepName">
+Appliquez deux méthodes de tri en Python
+</span>
+</a>
+<a href="233164-gerez-les-heritages.html" class="timeline__step" title="Gérez les héritages">
+<span class="timeline__stepName">
+Gérez les héritages
+</span>
+</a>
+<a href="233261-decouvrez-la-boucle-for.html" class="timeline__step" title="Découvrez la boucle for">
+<span class="timeline__stepName">
+Découvrez la boucle for
+</span>
+</a>
+<a href="233322-tp-realisez-un-dictionnaire-ordonne.html" class="timeline__step" title="TP : Réalisez un dictionnaire ordonné">
+<span class="timeline__stepName">
+TP : Réalisez un dictionnaire ordonné
+</span>
+</a>
+<a href="233491-apprehendez-les-decorateurs.html" class="timeline__step" title="Appréhendez les décorateurs">
+<span class="timeline__stepName">
+Appréhendez les décorateurs
+</span>
+</a>
+<a href="233659-decouvrez-les-metaclasses.html" class="timeline__step" title="Découvrez les métaclasses">
+<span class="timeline__stepName">
+Découvrez les métaclasses
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="233857-manipulez-les-expressions-regulieres.html" class="timeline__step" title="Manipulez les expressions régulières">
+<span class="timeline__stepName">
+Manipulez les expressions régulières
+</span>
+</a>
+<a href="234041-exprimez-le-temps.html" class="timeline__step" title="Exprimez le temps">
+<span class="timeline__stepName">
+Exprimez le temps
+</span>
+</a>
+<a href="234239-faites-de-la-programmation-systeme.html" class="timeline__step" title="Faites de la programmation système">
+<span class="timeline__stepName">
+Faites de la programmation système
+</span>
+</a>
+<a href="234357-utilisez-des-modules-de-mathematiques.html" class="timeline__step" title="Utilisez des modules de mathématiques">
+<span class="timeline__stepName">
+Utilisez des modules de mathématiques
+</span>
+</a>
+<a href="234500-gerez-les-mots-de-passe.html" class="timeline__step" title="Gérez les mots de passe">
+<span class="timeline__stepName">
+Gérez les mots de passe
+</span>
+</a>
+<a href="234698-gerez-les-reseaux.html" class="timeline__step" title="Gérez les réseaux">
+<span class="timeline__stepName">
+Gérez les réseaux
+</span>
+</a>
+<a href="2235416-creez-des-tests-unitaires-avec-unittest.html" class="timeline__step js-current-timeline-step" title="Créez des tests unitaires avec unittest">
+<span class="timeline__stepName">
+Créez des tests unitaires avec unittest
+</span>
+<span class="timeline__progressMarker"></span>
+</a>
+<a href="2235545-faites-de-la-programmation-parallele-avec-threading.html" class="timeline__step" title="Faites de la programmation parallèle avec threading">
+<span class="timeline__stepName">
+Faites de la programmation parallèle avec threading
+</span>
+</a>
+<a href="234859-creez-des-interfaces-graphiques-avec-tkinter.html" class="timeline__step" title="Créez des interfaces graphiques avec Tkinter">
+<span class="timeline__stepName">
+Créez des interfaces graphiques avec Tkinter
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="234928-ecrire-nos-programmes-python-dans-des-fichiers.html" class="timeline__step" title="Écrire nos programmes Python dans des fichiers">
+<span class="timeline__stepName">
+Écrire nos programmes Python dans des fichiers
+</span>
+</a>
+<a href="235020-distribuer-facilement-nos-programmes-python-avec-cx-freeze.html" class="timeline__step" title="Distribuer facilement nos programmes Python avec cx_Freeze">
+<span class="timeline__stepName">
+Distribuer facilement nos programmes Python avec cx_Freeze
+</span>
+</a>
+<a href="235263-de-bonnes-pratiques.html" class="timeline__step" title="De bonnes pratiques">
+<span class="timeline__stepName">
+De bonnes pratiques
+</span>
+ </a>
+<a href="235342-pour-finir-et-bien-continuer.html" class="timeline__step" title="Pour finir et bien continuer">
+<span class="timeline__stepName">
+Pour finir et bien continuer
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+</div>
+<span class="timeline__iconContainer">
+<a href="certificate_example.html" title="Certificat de réussite (voir un exemple)" class="roundIcon timeline__roundIcon">
+<i class="icon-trophy roundIcon__icon"></i>
+</a>
+</span>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="contentWithSidebar  spacer  js-contentWithSidebar  grid-inner-content">
+<div class="contentWithSidebar__content">
+<div class="relative js-sidebar-container">
+<div class="static">
+<h2 itemprop="name" data-part-title="Créez des tests unitaires avec unittest" class="part-title">Créez des tests unitaires avec unittest</h2>
+<section class="space-bottom js-desktop-sticky-container">
+<div class="tooltipMessage tooltipMessage--noArrow">
+<i class="tooltipMessage__icon  icon-lock"></i>
+<a href="/fr/login">Connectez-vous</a> ou <a href="register.html">inscrivez-vous</a> gratuitement pour bénéficier de toutes les fonctionnalités de ce cours !
+</div>
+<div itemprop="articleBody" data-page-indentifier="/fr/courses/235344-apprenez-a-programmer-en-python/2235416-creez-des-tests-unitaires-avec-unittest" class="js-isRestrictablePage js-course-container js-smilize " data-video-blocked-wrapper="<a href='/fr/login#popin-log-in' class='js-popin-activator'>">
+<div class="userContent js-userContent">
+<p id="r-2235156" data-claire-element-id="2512040">Tester ! Tout un monde. Vous allez voir dans ce chapitre comment tester le bon fonctionnement de votre programme et apprendre à le rendre aussi stable que possible au fur et à mesure que vous proposerez de nouvelles améliorations.</p><p id="r-2235157" data-claire-element-id="2512041">Si vous pensez que tester ne sert à rien ou que tester ne se fait que quand tout le développement est fini, je vous encourage vivement à lire ce chapitre, ne serait-ce que pour information.</p><p id="r-2235158" data-claire-element-id="2512042">Pour suivre ce chapitre, vous aurez besoin de savoir comment créer des classes et avoir une idée du fonctionnement de l'héritage.</p><h3 id="r-2235181" data-claire-element-id="8728372">Pourquoi tester ?</h3><div id="r-2235160" data-claire-element-id="2512044" data-claire-semantic="question"><p id="r-2235159" data-claire-element-id="2512043">On va parler de tests... mais qu'est-ce qu'on entend par « tester » ?</p></div><p id="r-2235161" data-claire-element-id="2512045">C'est la première question, et elle est très importante !</p><p id="r-2235162" data-claire-element-id="2512046">Dans ce chapitre, je vais parler de tests (principalement de tests unitaires), qui vérifient que votre code réagit comme il le devrait et qu'il continue à réagir comme il le devrait après de nouvelles améliorations.</p><p id="r-2235163" data-claire-element-id="2512047">Certains développeurs refusent de travailler sur du code qui n'est pas le leur s'il n'a pas de documentation. Pour ce que j'en ai vu, un nombre plus important encore de développeurs refuse de le faire si le code n'a pas de test.</p><p id="r-2235164" data-claire-element-id="2512048">Admettons que vous travaillez sur votre projet qui propose plusieurs fonctions, utilisées par d'autres développeurs ou utilisateurs. Vous pouvez être tout seul sur le projet et ne proposer qu'une dizaine de fonctions, c'est bien suffisant, le plus important c'est que votre code est utilisé par d'autres.</p><p id="r-2235165" data-claire-element-id="2512049">Puis après avoir codé votre dixième fonction, vous commencez à coder votre onzième qui utilise une autre fonction que vous avez déjà développée. Mais vous vous heurtez à un problème : votre nouvelle fonction ne marche pas comme il faut.</p><p id="r-2235166" data-claire-element-id="2512050">Après enquête, vous vous rendez compte que ce n'est pas votre fonction 11 qui pose problème, mais la fonction (1 ou 2) que la fonction 11 appelle. Elle ne répond plus à votre besoin et vous vous dites, naturellement, « je vais la modifier ».</p><p id="r-2235167" data-claire-element-id="2512051">Vous modifiez donc votre fonction 1 ou 2. Votre fonction 11 marche, enfin, sans problème. Vous proposez votre nouvelle version à vos utilisateurs.</p><p id="r-2235168" data-claire-element-id="2512052">Et vous recevez un choeur de protestations : jugez donc ! Ils utilisaient votre fonction 1 ou 2 sans problème, mais avec votre nouvelle version, rien ne marche plus.</p><p id="r-2235169" data-claire-element-id="2512053">Les tests sont une solution possible : pour chaque fonctionnalité de votre programme, il y aura un test et le test va s'assurer que votre programme reste valide même quand vous le modifierez. Ce qui deviendra de plus en plus important au fur et à mesure que votre programme gagnera en fonctionnalités, bien entendu.</p><div id="r-2235171" data-claire-element-id="2512055" data-claire-semantic="question"><p id="r-2235170" data-claire-element-id="2512054">Est-ce qu'on doit tester un code quand tout est développé ?</p></div><p id="r-2235172" data-claire-element-id="2512056">Non ! Si vous pouvez le faire dès le début, dès les premières lignes de code que vous écrivez, c'est mieux. Sachez qu'il peut être assez difficile d'écrire des tests quand votre programme comporte déjà plusieurs centaines de fonctionnalités, il vaut mieux le faire petit à petit.</p><p id="r-2235173" data-claire-element-id="2512057">Il existe aussi plusieurs méthodes de développement, dont le TDD (Test-Driven Development) qui veut que l'on écrive les tests avant d'écrire le code. Je ne rentrerai pas dans le détail ici, mais je vous conseille vivement d'écrire vos tests unitaires même si vous n'avez qu'un tout petit projet avec 4 ou 5 fonctions. Il y a une chance non négligeable que le petit projet devienne grand ; avec des tests à portée de main, vous dormirez plus tranquille.</p><div id="r-2235175" data-claire-element-id="2512059" data-claire-semantic="question"><p id="r-2235174" data-claire-element-id="2512058">Est-ce difficile de tester un programme ?</p></div><p id="r-2235176" data-claire-element-id="8728371">Une fois que vous maîtrisez une des méthodes de test et que vous l'appliquez à votre programme au fur et à mesure, non ce n'est absolument pas difficile. Vous allez voir dans ce chapitre comment utiliser des tests unitaires. Il existe d'autres méthodes de test proposées par Python, mais c'est celle-ci que je trouve, personnellement, la plus rapide à prendre en main ainsi que la plus flexible. Ce chapitre est là pour vous guider pas à pas vers la création de vos premiers tests unitaires et même vers la gestion de nombreux tests quand votre projet sera plus grand.</p><div id="r-2235178" data-claire-element-id="2512062" data-claire-semantic="question"><p id="r-2235177" data-claire-element-id="2512061">Qui écrit les tests ?</p></div><p id="r-2235179" data-claire-element-id="2512063">Le développeur, la plupart du temps. Là encore, la méthode de test utilisée peut permettre à d'autres personnes d'écrire les tests, mais les tests unitaires sont souvent écrits par des développeurs (ou des utilisateurs sachant programmer). Comme vous allez le voir, ils ne sont pas très difficiles à écrire, mais vous passerez malgré tout par Python pour ce faire.</p><p id="r-2235180" data-claire-element-id="2512064">Passons à la pratique, la découverte du module <em>unittest</em> !</p><h3 id="r-2235367" data-claire-element-id="8728424">Premiers exemples de tests unitaires</h3><p id="r-2235182" data-claire-element-id="2512066">Le module <em>unittest</em> de la bibliothèque standard de Python inclut le mécanisme des tests unitaires.</p><p id="r-2235183" data-claire-element-id="2512067">Voici la structure que vous rencontrerez le plus souvent :</p><ul id="r-2235188" data-claire-element-id="8728423"><li id="r-2235185" data-claire-element-id="8728422"><p id="r-2235184" data-claire-element-id="8728421">Une fonctionnalité codée grâce à un ensemble de fonctions, de classes, de modules, de packages et autre.</p></li><li id="r-2235187" data-claire-element-id="2512071"><p id="r-2235186" data-claire-element-id="2512070">Pour chaque fonctionnalité, un test qui vérifie que la fonctionnalité fait bien ce qu'on lui demande. Par exemple, que si une certaine fonction est appelée avec certains paramètres, elle retourne telle valeur.</p></li></ul><p id="r-2235189" data-claire-element-id="2512073">Nous allons nous intéresser ici à ce second point dans la liste : comment tester une fonctionnalité.</p><h4 id="r-2235289" data-claire-element-id="8728413">Tester une fonctionnalité existante</h4><p id="r-2235190" data-claire-element-id="2512074">Pour commencer, nous allons tester une fonctionnalité déjà existante, proposée dans l'un des modules de Python. Je vais reprendre les exemples de la <a href="unittest.html.html">documentation officielle</a> qui sont assez faciles à comprendre.</p><p id="r-2235191" data-claire-element-id="2512075">Pour cet exemple, nous allons nous intéresser au module <em>random</em> que nous avons déjà utilisé. Nous allons chercher à tester le fonctionnement en particulier de trois fonctions :</p><ul id="r-2235201" data-claire-element-id="8728379"><li id="r-2235194" data-claire-element-id="8728374"><p id="r-2235192" data-claire-element-id="8728373"><code data-claire-semantic="text">random.choice</code>: cette fonction retourne un élément au hasard de la séquence précisée en paramètre.</p><pre id="r-2235193" data-claire-element-id="6254501"><code data-claire-semantic="pycon">&gt;&gt;&gt; liste = [&quot;chat&quot;, &quot;chien&quot;, &quot;renard&quot;, &quot;serpent&quot;, &quot;cheval&quot;, &quot;parapluie&quot;]
+&gt;&gt;&gt; random.choice(liste)
+'renard'
+&gt;&gt;&gt;</code></pre></li><li id="r-2235197" data-claire-element-id="8728376"><p id="r-2235195" data-claire-element-id="8728375"><code data-claire-semantic="text">random.shuffle</code>: cette fonction mélange une liste. La liste d'origine est modifiée.</p><pre id="r-2235196" data-claire-element-id="6254503"><code data-claire-semantic="pycon">&gt;&gt;&gt; liste = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+&gt;&gt;&gt; random.shuffle(liste)
+&gt;&gt;&gt; liste
+[3, 4, 7, 1, 8, 6, 5, 9, 2]
+&gt;&gt;&gt;</code></pre></li><li id="r-2235200" data-claire-element-id="8728378"><p id="r-2235198" data-claire-element-id="8728377"><code data-claire-semantic="text">random.sample</code>: cette fonction prend une séquence et un nombre en paramètres. Elle retourne une nouvelle séquence contenant autant d'éléments que le nombre indiqué, sélectionnés aléatoirement dans la séquence d'origine. Ce n'est pas clair ?</p><pre id="r-2235199" data-claire-element-id="6254505"><code data-claire-semantic="pycon">&gt;&gt;&gt; liste = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+&gt;&gt;&gt; random.sample(liste, 5)
+['b', 'a', 'c', 'j', 'e']
+&gt;&gt;&gt; # Ou peut-être que cet exemple sera plus clair
+... random.sample(range(1000), 10)
+[389, 406, 890, 955, 837, 401, 971, 716, 954, 862]
+&gt;&gt;&gt;</code></pre></li></ul><h5 id="r-2235206" data-claire-element-id="8728381">Structure de base d'un test unitaire</h5><p id="r-2235202" data-claire-element-id="2512086">Nous le verrons plus loin, un test unitaire peut être constitué de nombreux tests répartis dans plusieurs packages et modules. Pour l'instant, nous n'allons nous intéresser qu'à un <strong>test case</strong>, la forme la plus simple du test unitaire.</p><p id="r-2235203" data-claire-element-id="8728380">Pour créer un test unitaire, la première chose est de créer une classe héritant de<code data-claire-semantic="text">unittest.TestCase</code>:</p><pre id="r-2235204" data-claire-element-id="6254508"><code data-claire-semantic="python">import random
+import unittest
+
+class RandomTest(unittest.TestCase):</code></pre><p id="r-2235205" data-claire-element-id="2512089">On peut définir ensuite un test dans une méthode dont le nom commence par <em>test</em>.</p><h5 id="r-2235229" data-claire-element-id="6254512">Test de la fonction <em>random.choice</em></h5><p id="r-2235207" data-claire-element-id="2512091">Voyons pour le premier test, le test de la fonction <em>choice</em> :</p><pre id="r-2235208" data-claire-element-id="6254510"><code data-claire-semantic="python">class RandomTest(unittest.TestCase):
+
+    &quot;&quot;&quot;Test case utilisé pour tester les fonctions du module 'random'.&quot;&quot;&quot;
+
+    def test_choice(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.choice'.&quot;&quot;&quot;
+        liste = list(range(10))
+        elt = random.choice(liste)
+        # Vérifie que 'elt' est dans 'liste'
+        self.assertIn(elt, liste)</code></pre><p id="r-2235209" data-claire-element-id="2512093">Quelques explications s'imposent pour notre méthode de test :</p><ol id="r-2235216" data-claire-element-id="2512100"><li id="r-2235211" data-claire-element-id="2512095"><p id="r-2235210" data-claire-element-id="2512094">D'abord à la première ligne, on crée une liste de <em>0</em> à <em>9</em> ;</p></li><li id="r-2235213" data-claire-element-id="2512097"><p id="r-2235212" data-claire-element-id="2512096">Ensuite on appelle la fonction <em>random.choice</em> sur notre liste et on récupère le retour ;</p></li><li id="r-2235215" data-claire-element-id="2512099"><p id="r-2235214" data-claire-element-id="2512098">Enfin, on vérifie que notre élément retourné par <em>random.choice</em> se trouve bien dans notre liste. On utilise pour ce faire une méthode <em>assertIn</em> et pas le mot clé <em>assert</em>. En fait, <em>unittest.TestCase</em> propose plusieurs méthodes d'assertion que nous utiliserons dans nos tests unitaires. Une assertion lève une exception qui serait considérée par <em>unittest</em> comme une erreur. Nous verrons plus loin comment les erreurs sont gérées.</p></li></ol><p id="r-2235217" data-claire-element-id="2512101">Si vous exécutez ce code dans votre interpréteur... rien ne se passe ! Vous avez créé une classe mais vous n'avez pas demandé au test de se lancer. Pour ce faire vous pouvez exécuter l'instruction :</p><pre id="r-2235218" data-claire-element-id="2831209"><code data-claire-semantic="python">unittest.main()</code></pre><p id="r-2235219" data-claire-element-id="2512103">Et vous devriez obtenir quelque chose comme :</p><pre id="r-2235220" data-claire-element-id="6254511"><samp>.
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+OK</samp></pre><aside id="r-2235222" data-claire-element-id="2512106" data-claire-semantic="warning"><p id="r-2235221" data-claire-element-id="2512105">L'appel à <em>unittest.main</em> ferme la console Python, soyez prévenu, ce n'est pas une erreur mais bien un comportement attendu.</p></aside><p id="r-2235223" data-claire-element-id="2512107">Le retour affiché se décompose en trois parties :</p><ul id="r-2235228" data-claire-element-id="5205876"><li id="r-2235225" data-claire-element-id="2512109"><p id="r-2235224" data-claire-element-id="2512108">D'abord, la première ligne contient un caractère par test exécuté. Les principaux caractères sont un point (&quot;.&quot;) si le test s'est validé, la lettre F si le test n'a pas obtenu le bon résultat et la lettre E si le test a rencontré une erreur (si une exception a été levée pendant l'exécution de la méthode) ;</p></li><li id="r-2235227" data-claire-element-id="5205873"><p id="r-2235226" data-claire-element-id="5205872">Ensuite se trouve une ligne récapitulative du nombre de tests exécutés ;</p></li><li id="r-3383777" data-claire-element-id="5205875"><p id="r-3383776" data-claire-element-id="5205874">Enfin, la dernière ligne récapitule le nombre de réussites ou échecs ou erreurs. Si tout va bien, cette dernière ligne devrait être simplement &quot;OK&quot;.</p></li></ul><h5 id="r-2235236" data-claire-element-id="8728383">Faisons échouer un test</h5><p id="r-2235230" data-claire-element-id="2512114">Modifions notre test pour être sûr de provoquer un échec :</p><pre id="r-2235231" data-claire-element-id="6254513"><code data-claire-semantic="python">class RandomTest(unittest.TestCase):
+
+    &quot;&quot;&quot;Test case utilisé pour tester les fonctions du module 'random'.&quot;&quot;&quot;
+
+    def test_choice(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.choice'.&quot;&quot;&quot;
+        liste = list(range(10))
+        elt = random.choice(liste)
+        self.assertIn(elt, ('a', 'b', 'c'))</code></pre><p id="r-2235232" data-claire-element-id="8728382">Et après un appel à<code data-claire-semantic="text">unittest.main()</code>:</p><pre id="r-2235233" data-claire-element-id="6254514"><samp>F
+======================================================================
+FAIL: test_choice (__main__.RandomTest)
+Test le fonctionnement de la fonction 'random.choice'.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File &quot;code.py&quot;, line 13, in test_choice
+    self.assertIn(elt, ('a', 'b', 'c'))
+AssertionError: 0 not found in ('a', 'b', 'c')
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (failures=1)</samp></pre><p id="r-2235234" data-claire-element-id="2512118">Vous voyez que l'on obtient pas mal d'informations sur les tests qui ne marchent pas. D'abord, notez qu'ici, on parle d'échec (failure) et non pas d'erreur (error). Cela signifie que notre assertion ne s'est pas vérifiée (regardez le traceback) mais que notre test s'est correctement exécuté. Vous pouvez essayer de provoquer une erreur dans la méthode de test aussi, pour voir le résultat.</p><p id="r-2235235" data-claire-element-id="2512119">Le traceback est assez détaillé : il donne la ligne de l'erreur avec les appels successifs, si on a besoin de remonter la piste de l'erreur. Le message d'erreur lui-même donne des informations plus précises sur pourquoi le test a échoué (<em>0 not found in ('a', 'b', 'c')</em>).</p><h5 id="r-2235245" data-claire-element-id="8728412">Test de la fonction <em>random.shuffle</em></h5><p id="r-2235237" data-claire-element-id="2512121">Intéressons-nous maintenant à la fonction <em>random.shuffle</em>. Souvenez-vous, elle prend une liste en paramètre et mélange cette liste aléatoirement.</p><p id="r-2235238" data-claire-element-id="8728411">En vous inspirant du premier exemple, essayez d'écrire la méthode de test correspondante. Il vous faut réfléchir à comment vérifier qu'une liste, après avoir été mélangée, correspond à une liste d'éléments de <em>0</em> à <em>9</em>.</p><p id="r-2235239" data-claire-element-id="2512123">Je vous conseille d'utiliser cette fois la méthode d'assertion <em>assertEqual</em> qui prend deux arguments en paramètre et vérifie le test si les arguments sont identiques. Vous trouverez une liste des méthodes d'assertion les plus communes plus bas.</p><p id="r-2235240" data-claire-element-id="2512124">À vous de jouer !</p><pre id="r-2235242" data-claire-element-id="6254516"><code data-claire-semantic="python">class RandomTest(unittest.TestCase):
+
+    &quot;&quot;&quot;Test case utilisé pour tester les fonctions du module 'random'.&quot;&quot;&quot;
+
+    # Autres méthodes de test
+    def test_shuffle(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.shuffle'.&quot;&quot;&quot;
+        liste = list(range(10))
+        random.shuffle(liste)
+        liste.sort()
+        self.assertEqual(liste, list(range(10)))</code></pre><p id="r-2235243" data-claire-element-id="2512127">Comme vous le voyez, on appelle la fonction <em>random.shuffle</em> avant de trier de nouveau notre liste. Une fois la liste triée de nouveau, elle devra être identique à notre liste d'origine (<code data-claire-semantic="text">list(range(10))</code>).</p><p id="r-2235244" data-claire-element-id="2512128">Ici, nous avons utilisé la méthode <em>assertEqual</em> qui sera sans doute celle que vous utiliserez le plus souvent. Nous verrons un peu plus loin une liste des méthodes d'assertion proposées par <em>unittest.TestCase</em>.</p><h5 id="r-2235274" data-claire-element-id="6254522">Test de la fonction <em>random.sample</em></h5><p id="r-2235246" data-claire-element-id="2512130">Enfin, écrivons notre méthode de test de la fonction <em>random.sample</em>. Souvenez-vous, cette fonction prend deux paramètres : une séquence et un nombre <em>K</em>. Elle retourne une liste contenant <em>K</em> éléments sélectionnés aléatoirement dans notre séquence de base.</p><p id="r-2235247" data-claire-element-id="2512131">Voyons une première approche :</p><pre id="r-2235248" data-claire-element-id="6254518"><code data-claire-semantic="python">class RandomTest(unittest.TestCase):
+
+    &quot;&quot;&quot;Test case utilisé pour tester les fonctions du module 'random'.&quot;&quot;&quot;
+
+    # Autres méthodes de test
+    def test_sample(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.sample'.&quot;&quot;&quot;
+        liste = list(range(10))
+        extrait = random.sample(liste, 5)
+        for element in extrait:
+            self.assertIn(element, liste)</code></pre><p id="r-2235249" data-claire-element-id="2512133">Jusqu'ici ce n'est pas bien différent de ce que nous avons fait un peu plus haut.</p><p id="r-2235250" data-claire-element-id="2512134">Avez-vous essayé <em>random.sample</em> en précisant un nombre <em>K</em> plus élevé que la taille de la séquence ?</p><pre id="r-2235251" data-claire-element-id="6254519"><code data-claire-semantic="pycon">&gt;&gt;&gt; liste = list(range(10))
+&gt;&gt;&gt; random.sample(liste, 20)
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+  File &quot;C:\python34\lib\random.py&quot;, line 313, in sample
+    raise ValueError(&quot;Sample larger than population&quot;)
+ValueError: Sample larger than population
+&gt;&gt;&gt;</code></pre><p id="r-2235252" data-claire-element-id="2512136"><cite>Citation : PEP 20</cite></p><blockquote id="r-2235254" data-claire-element-id="2512138"><p id="r-2235253" data-claire-element-id="2512137">Errors should never pass silently.</p></blockquote><p id="r-2235255" data-claire-element-id="2512139">Ce comportement est attendu et souhaitable. Autant le tester également :</p><pre id="r-2235256" data-claire-element-id="6254520"><code data-claire-semantic="python">class RandomTest(unittest.TestCase):
+
+    &quot;&quot;&quot;Test case utilisé pour tester les fonctions du module 'random'.&quot;&quot;&quot;
+
+    # Autres méthodes de test
+    def test_sample(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.sample'.&quot;&quot;&quot;
+        liste = list(range(10))
+        extrait = random.sample(liste, 5)
+        for element in extrait:
+            self.assertIn(element, liste)
+
+        self.assertRaises(ValueError, random.sample, liste, 20)</code></pre><p id="r-2235257" data-claire-element-id="2512141">La dernière ligne mérite quelques explications. On utilise encore une méthode d'assertion <em>assert*</em> (cette fois, <em>assertRaises</em>).</p><p id="r-2235258" data-claire-element-id="2512142">On peut utiliser cette méthode de deux façons :</p><ul id="r-2235263" data-claire-element-id="2512147"><li id="r-2235260" data-claire-element-id="2512144"><p id="r-2235259" data-claire-element-id="2512143">Soit, comme on vient de le faire, en précisant d'abord le type de l'exception qui doit être levée, puis la fonction qui doit être appelée (la référence, sans parenthèses) et enfin les paramètres attendus par la fonction ;</p></li><li id="r-2235262" data-claire-element-id="2512146"><p id="r-2235261" data-claire-element-id="2512145">Soit en utilisant un context manager (gestionnaire de contexte) qui rend le code plus facile à lire.</p></li></ul><p id="r-2235264" data-claire-element-id="2512148">Nous avons vu un <strong>context manager</strong> au moment des fichiers. Rappelez-vous, c'est le bloc d'instructions qui commence par le mot clé <em>with</em>.</p><p id="r-2235265" data-claire-element-id="2512149">Voyons comment écrire notre test avec un <strong>context manager</strong>.</p><pre id="r-2235266" data-claire-element-id="6254521"><code data-claire-semantic="python">class RandomTest(unittest.TestCase):
+
+    &quot;&quot;&quot;Test case utilisé pour tester les fonctions du module 'random'.&quot;&quot;&quot;
+
+    # Autres méthodes de test
+    def test_sample(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.sample'.&quot;&quot;&quot;
+        liste = list(range(10))
+        extrait = random.sample(liste, 5)
+        for element in extrait:
+            self.assertIn(element, liste)
+
+        with self.assertRaises(ValueError):
+            random.sample(liste, 20)</code></pre><p id="r-2235267" data-claire-element-id="2512151">Comme vous le voyez, cette seconde syntaxe est plus lisible :</p><ol id="r-2235272" data-claire-element-id="2512156"><li id="r-2235269" data-claire-element-id="2512153"><p id="r-2235268" data-claire-element-id="2512152">On appelle un nouveau <strong>context manager</strong> grâce au mot-clé <em>with</em> ouvert sur le retour de la méthode <em>assertRaises</em>. Cette fois, on ne passe en paramètre de cette méthode que le type de notre exception ;</p></li><li id="r-2235271" data-claire-element-id="2512155"><p id="r-2235270" data-claire-element-id="2512154">À l'intérieur de notre bloc se trouve la ligne qui doit lever l'exception <em>ValueError</em>. Si le bloc dans le <strong>context manager</strong> lève bien l'exception, alors le test passe. Sinon il ne passe pas.</p></li></ol><p id="r-2235273" data-claire-element-id="2512157">Cette seconde syntaxe est plus lisible, à mon sens, mais je vous montre les deux car vous pourriez trouver la première au cours de vos lectures d'autres codes.</p><h5 id="r-2235284" data-claire-element-id="6254525">Initialisation des tests</h5><p id="r-2235275" data-claire-element-id="2512159">Vous l'avez peut-être remarqué, toutes nos méthodes de test commencent par cette ligne de code :</p><pre id="r-2235276" data-claire-element-id="2831220"><code data-claire-semantic="python">liste = list(range(10))</code></pre><p id="r-2235277" data-claire-element-id="2512161">Il existe un moyen pour éviter de répéter cette ligne à chaque fois. Nos méthodes de test partagent un point commun : elles sont définies dans la même classe. Autant en profiter.</p><p id="r-2235278" data-claire-element-id="2512162"><em>unittest.TestCase</em> nous propose une méthode qui est appelée avant chaque méthode de test. Il serait mieux que la création de notre liste (de 0 à 9) se trouve dans cette méthode.</p><p id="r-2235279" data-claire-element-id="2512163">Son nom est <em>setUp</em>. Créez-la dans votre classe :</p><pre id="r-2235280" data-claire-element-id="6254523"><code data-claire-semantic="python">class RandomTest(unittest.TestCase):
+
+    &quot;&quot;&quot;Test case utilisé pour tester les fonctions du module 'random'.&quot;&quot;&quot;
+
+    def setUp(self):
+        &quot;&quot;&quot;Initialisation des tests.&quot;&quot;&quot;
+        self.liste = list(range(10))</code></pre><p id="r-2235281" data-claire-element-id="2512165">Comme vous le voyez, on écrit directement notre liste en attribut d'instance de notre test. Cela veut dire qu'il va falloir modifier nos méthodes de test pour qu'elles l'utilisent :</p><pre id="r-2235282" data-claire-element-id="6254524"><code data-claire-semantic="python">class RandomTest(unittest.TestCase):
+
+    &quot;&quot;&quot;Test case utilisé pour tester les fonctions du module 'random'.&quot;&quot;&quot;
+
+    # Autres méthodes de test
+    def test_sample(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.sample'.&quot;&quot;&quot;
+        extrait = random.sample(self.liste, 5)
+        for element in extrait:
+            self.assertIn(element, self.liste)
+
+        with self.assertRaises(ValueError):
+            random.sample(self.liste, 20)</code></pre><p id="r-2235283" data-claire-element-id="2512167">Au lieu de créer la liste, on utilise l'attribut d'instance créé dans la méthode <em>setUp</em>. Il existe également une méthode <em>tearDown</em> qui est appelée après chaque test.</p><h5 id="r-2235288" data-claire-element-id="8728385">Récapitulatif complet du code de test</h5><p id="r-2235285" data-claire-element-id="2512169">Voici le code complet de notre test case et de nos trois méthodes de test.</p><pre id="r-2235286" data-claire-element-id="6254526"><code data-claire-semantic="python">import random
+import unittest
+
+class RandomTest(unittest.TestCase):
+
+    &quot;&quot;&quot;Test case utilisé pour tester les fonctions du module 'random'.&quot;&quot;&quot;
+
+    def setUp(self):
+        &quot;&quot;&quot;Initialisation des tests.&quot;&quot;&quot;
+        self.liste = list(range(10))
+
+    def test_choice(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.choice'.&quot;&quot;&quot;
+        elt = random.choice(self.liste)
+        self.assertIn(elt, self.liste)
+
+    def test_shuffle(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.shuffle'.&quot;&quot;&quot;
+        random.shuffle(self.liste)
+        self.liste.sort()
+        self.assertEqual(self.liste, list(range(10)))
+
+    def test_sample(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.sample'.&quot;&quot;&quot;
+        extrait = random.sample(self.liste, 5)
+        for element in extrait:
+            self.assertIn(element, self.liste)
+
+        with self.assertRaises(ValueError):
+            random.sample(self.liste, 20)</code></pre><p id="r-2235287" data-claire-element-id="8728384">Souvenez-vous, pour tester le code, vous pouvez ajouter l'instruction<code data-claire-semantic="text">unittest.main()</code>à la fin de votre module. Nous verrons un peu plus loin un autre moyen, plus simple, pour tester un ou plusieurs modules.</p><h4 id="r-2235366" data-claire-element-id="5205916">Les principales méthodes d'assertion</h4><p id="r-2235290" data-claire-element-id="2512174">Je vous propose un petit tableau listant les méthodes d'assertion les plus courantes.</p><table id="r-2235363" data-claire-element-id="5205915"><thead id="r-2235296" data-claire-element-id="2512180"><tr id="r-2235295" data-claire-element-id="2512179"><th id="r-2235292" data-claire-element-id="2512176"><p id="r-2235291" data-claire-element-id="2512175">Méthode</p></th><th id="r-2235294" data-claire-element-id="2512178"><p id="r-2235293" data-claire-element-id="2512177">Explications</p></th></tr></thead><tbody id="r-2235362" data-claire-element-id="5205914"><tr id="r-2235301" data-claire-element-id="2512185"><td id="r-2235298" data-claire-element-id="2512182"><p id="r-2235297" data-claire-element-id="2512181"><code data-claire-semantic="text">assertEqual(a, b)</code></p></td><td id="r-2235300" data-claire-element-id="2512184"><p id="r-2235299" data-claire-element-id="2512183"><code data-claire-semantic="text">a == b</code></p></td></tr><tr id="r-2235306" data-claire-element-id="2512190"><td id="r-2235303" data-claire-element-id="2512187"><p id="r-2235302" data-claire-element-id="2512186"><code data-claire-semantic="text">assertNotEqual(a, b)</code></p></td><td id="r-2235305" data-claire-element-id="2512189"><p id="r-2235304" data-claire-element-id="2512188"><code data-claire-semantic="text">a != b</code></p></td></tr><tr id="r-2235311" data-claire-element-id="2512195"><td id="r-2235308" data-claire-element-id="2512192"><p id="r-2235307" data-claire-element-id="2512191"><code data-claire-semantic="text">assertTrue(x)</code></p></td><td id="r-2235310" data-claire-element-id="2512194"><p id="r-2235309" data-claire-element-id="2512193"><code data-claire-semantic="text">x is True</code></p></td></tr><tr id="r-2235316" data-claire-element-id="2512200"><td id="r-2235313" data-claire-element-id="2512197"><p id="r-2235312" data-claire-element-id="2512196"><code data-claire-semantic="text">assertFalse(x)</code></p></td><td id="r-2235315" data-claire-element-id="2512199"><p id="r-2235314" data-claire-element-id="2512198"><code data-claire-semantic="text">x is False</code></p></td></tr><tr id="r-2235321" data-claire-element-id="2512205"><td id="r-2235318" data-claire-element-id="2512202"><p id="r-2235317" data-claire-element-id="2512201"><code data-claire-semantic="text">assertIs(a, b)</code></p></td><td id="r-2235320" data-claire-element-id="2512204"><p id="r-2235319" data-claire-element-id="2512203"><code data-claire-semantic="text">a is b</code></p></td></tr><tr id="r-2235326" data-claire-element-id="2512210"><td id="r-2235323" data-claire-element-id="2512207"><p id="r-2235322" data-claire-element-id="2512206"><code data-claire-semantic="text">assertIsNot(a, b)</code></p></td><td id="r-2235325" data-claire-element-id="2512209"><p id="r-2235324" data-claire-element-id="2512208"><code data-claire-semantic="text">a is not b</code></p></td></tr><tr id="r-2235331" data-claire-element-id="2512215"><td id="r-2235328" data-claire-element-id="2512212"><p id="r-2235327" data-claire-element-id="2512211"><code data-claire-semantic="text">assertIsNone(x)</code></p></td><td id="r-2235330" data-claire-element-id="2512214"><p id="r-2235329" data-claire-element-id="2512213"><code data-claire-semantic="text">x is None</code></p></td></tr><tr id="r-2235336" data-claire-element-id="2512220"><td id="r-2235333" data-claire-element-id="2512217"><p id="r-2235332" data-claire-element-id="2512216"><code data-claire-semantic="text">assertIsNotNone(x)</code></p></td><td id="r-2235335" data-claire-element-id="2512219"><p id="r-2235334" data-claire-element-id="2512218"><code data-claire-semantic="text">x is not None</code></p></td></tr><tr id="r-2235341" data-claire-element-id="2512225"><td id="r-2235338" data-claire-element-id="2512222"><p id="r-2235337" data-claire-element-id="2512221"><code data-claire-semantic="text">assertIn(a, b)</code></p></td><td id="r-2235340" data-claire-element-id="2512224"><p id="r-2235339" data-claire-element-id="2512223"><code data-claire-semantic="text">a in b</code></p></td></tr><tr id="r-2235346" data-claire-element-id="2512230"><td id="r-2235343" data-claire-element-id="2512227"><p id="r-2235342" data-claire-element-id="2512226"><code data-claire-semantic="text">assertNotIn(a, b)</code></p></td><td id="r-2235345" data-claire-element-id="2512229"><p id="r-2235344" data-claire-element-id="2512228"><code data-claire-semantic="text">a not in b</code></p></td></tr><tr id="r-2235351" data-claire-element-id="2512235"><td id="r-2235348" data-claire-element-id="2512232"><p id="r-2235347" data-claire-element-id="2512231"><code data-claire-semantic="text">assertIsInstance(a, b)</code></p></td><td id="r-2235350" data-claire-element-id="2512234"><p id="r-2235349" data-claire-element-id="2512233"><code data-claire-semantic="text">isinstance(a, b)</code></p></td></tr><tr id="r-2235356" data-claire-element-id="2512240"><td id="r-2235353" data-claire-element-id="2512237"><p id="r-2235352" data-claire-element-id="2512236"><code data-claire-semantic="text">assertNotIsInstance(a, b)</code></p></td><td id="r-2235355" data-claire-element-id="2512239"><p id="r-2235354" data-claire-element-id="2512238"><code data-claire-semantic="text">not isinstance(a, b)</code></p></td></tr><tr id="r-2235361" data-claire-element-id="5205913"><td id="r-2235358" data-claire-element-id="5205912"><p id="r-2235357" data-claire-element-id="5205911"><code data-claire-semantic="text">assertRaises(exception, fonction, *args, **kwargs)</code> </p></td><td id="r-2235360" data-claire-element-id="2512244"><p id="r-2235359" data-claire-element-id="2512243">Vérifie que la fonction lève l'exception attendue.</p></td></tr></tbody></table><p id="r-2235364" data-claire-element-id="2512248">Pour une liste complète, consultez la <a href="unittest.html.html">documentation officielle du module unittest</a>.</p><p id="r-2235365" data-claire-element-id="2512249">Nous allons nous intéresser à présent à la découverte automatique des tests par Python.</p><h3 id="r-2235415" data-claire-element-id="30846644">La découverte automatique des tests</h3><p id="r-2235368" data-claire-element-id="8728388">Lancer les tests avec<code data-claire-semantic="text">unittest.main()</code>peut s'avérer pratique, mais généralement on fera appel à la découverte automatique des tests. Cette fonctionnalité permet de rechercher tous les tests unitaires contenus dans un package et de les exécuter.</p><h4 id="r-2235397" data-claire-element-id="6254533">Lancement de tests unitaires depuis un répertoire</h4><p id="r-2235369" data-claire-element-id="2512253">Pour commencer, nous allons essayer de lancer les tests unitaires que nous avons créés auparavant depuis un répertoire.</p><ul id="r-2235377" data-claire-element-id="2512261"><li id="r-2235371" data-claire-element-id="2512255"><p id="r-2235370" data-claire-element-id="2512254">Créez un répertoire où vous mettez généralement votre code Python. Pour moi, ce répertoire s'appelle <em>pytest</em> et se trouve dans <em>Mes Documents</em> ;</p></li><li id="r-2235373" data-claire-element-id="2512257"><p id="r-2235372" data-claire-element-id="2512256">Ouvrez la console. Sous Windows, cliquez sur <em>Exécuter...</em> dans le menu démarrer (ou tapez <em>Windows + R</em>) et entrez <em>cmd</em> ;</p></li><li id="r-2235376" data-claire-element-id="2512260"><p id="r-2235374" data-claire-element-id="2512258">Déplacez-vous dans le répertoire que vous avez créé :</p><pre id="r-2235375" data-claire-element-id="2512259"><samp>cd pytest</samp></pre></li></ul><p id="r-2235378" data-claire-element-id="2512262">Une fois dans le bon dossier, créez le fichier <em>test_random.py</em> et collez le code que nous avons vu plus haut :</p><pre id="r-2235379" data-claire-element-id="6254530"><code data-claire-semantic="python">import random
+import unittest
+
+class RandomTest(unittest.TestCase):
+
+    &quot;&quot;&quot;Test case utilisé pour tester les fonctions du module 'random'.&quot;&quot;&quot;
+
+    def setUp(self):
+        &quot;&quot;&quot;Initialisation des tests.&quot;&quot;&quot;
+        self.liste = list(range(10))
+
+    def test_choice(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.choice'.&quot;&quot;&quot;
+        elt = random.choice(self.liste)
+        self.assertIn(elt, self.liste)
+
+    def test_shuffle(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.shuffle'.&quot;&quot;&quot;
+        random.shuffle(self.liste)
+        self.liste.sort()
+        self.assertEqual(self.liste, list(range(10)))
+
+    def test_sample(self):
+        &quot;&quot;&quot;Test le fonctionnement de la fonction 'random.sample'.&quot;&quot;&quot;
+        extrait = random.sample(self.liste, 5)
+        for element in extrait:
+            self.assertIn(element, self.liste)
+
+        with self.assertRaises(ValueError):
+            random.sample(self.liste, 20)</code></pre><p id="r-2235380" data-claire-element-id="2512264">Sauvegardez ce fichier et revenez dans la console.</p><p id="r-2235381" data-claire-element-id="2512265">Vous devez maintenant exécuter Python avec l'option <em>-m unittest</em>. Sous Windows vous aurez sûrement une commande comme :</p><pre id="r-2235382" data-claire-element-id="2512266"><samp>c:\python34\python.exe -m unittest</samp></pre><p id="r-2235383" data-claire-element-id="2512267">Sous Linux vous aurez probablement :</p><pre id="r-2235384" data-claire-element-id="2831229"><code data-claire-semantic="python">python3.4 -m unittest</code></pre><p id="r-2235385" data-claire-element-id="2512269">Si tout se passe bien vous devriez voir les tests s'exécuter :</p><pre id="r-2235386" data-claire-element-id="6254531"><samp>...
+----------------------------------------------------------------------
+Ran 3 tests in 0.007s
+
+OK</samp></pre><p id="r-2235387" data-claire-element-id="2512271">L'option <em>-m</em> permet d'exécuter un module spécifique (ici <em>unittest</em>). Quand appelé directement depuis Python, <em>unittest</em> cherche les tests unitaires présents dans le dossier courant. Vous pouvez aussi lui donner un chemin de test à exécuter, par exemple <em>test_random.RandomTest.test_shuffle</em> :</p><ol id="r-2235394" data-claire-element-id="2512278"><li id="r-2235389" data-claire-element-id="2512273"><p id="r-2235388" data-claire-element-id="2512272"><em>test_random</em> est le nom du module (le nom du fichier sans l'extension) ;</p></li><li id="r-2235391" data-claire-element-id="2512275"><p id="r-2235390" data-claire-element-id="2512274"><em>RandomTest</em> est le nom de la classe dans notre module ;</p></li><li id="r-2235393" data-claire-element-id="2512277"><p id="r-2235392" data-claire-element-id="2512276"><em>test_shuffle</em> est le nom de notre méthode à exécuter.</p></li></ol><pre id="r-2235395" data-claire-element-id="6254532"><samp>c:\python34\python.exe -m unittest test_random.RandomTest.test_shuffle
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK</samp></pre><p id="r-2235396" data-claire-element-id="2512280">Vos tests unitaires doivent être indépendants, c'est-à-dire qu'on peut les exécuter tout seul (comme on vient de le faire) ou en groupe (comme on l'a fait plus tôt). En bref, ils ne doivent pas dépendre d'autres tests pour s'exécuter.</p><h4 id="r-2235406" data-claire-element-id="8728391">Structure d'un projet avec ses tests</h4><p id="r-2235398" data-claire-element-id="2512282">Nous allons ici regarder un projet de taille respectable, <a href="http://www.cherrypy.org/">CherryPy</a>, qui propose un framework léger pour créer un serveur web. Je vous conseille d'ailleurs de jeter un oeil à ce projet si vous avez le temps.</p><p id="r-2235399" data-claire-element-id="2512283">Si vous téléchargez et décompressez les sources, vous verrez un dossier <em>cherrypy-version</em>. Si vous entrez dedans, vous pouvez lancer les tests unitaires en faisant :</p><pre id="r-2235400" data-claire-element-id="2831231"><code data-claire-semantic="python">python -m unittest</code></pre><p id="r-2235401" data-claire-element-id="8728389">Il peut être nécessaire d'installer le package au préalable (exécutez la commande<code data-claire-semantic="text">python setup.py install</code>pour ce faire).</p><p id="r-2235402" data-claire-element-id="2512286">Si Python trouve les tests unitaires du projet, c'est qu'il explore les répertoires du projet. Il y a notamment le répertoire <em>cherrypy</em> qui contient l'ensemble des sources. Dans ce répertoire se trouve le sous-répertoire <em>test</em> et dans ce sous-répertoire se trouvent les tests de la bibliothèque.</p><p id="r-2235403" data-claire-element-id="8728390">Je ne rentrerai pas dans le détail ici, mais ce qu'il faut comprendre, c'est que la commande<code data-claire-semantic="text">python -m unittest</code>explore récursivement les packages et modules à la recherche de tests. Tous les packages sont explorés, mais les modules (comme les méthodes de test) doivent commencer par <em>test</em>.</p><p id="r-2235404" data-claire-element-id="2512288">Généralement, vous trouverez une certaine fonctionnalité (disons dans <em>cherrypy/fonctionnalite.py</em>) et le test de cette fonctionnalité dans un module spécifique (<em>cherrypy/test/test_fonctionnalite.py</em>). Le découpage du dossier <em>test</em> sera souvent le même que le découpage de vos sources (c'est plus une convention qu'une obligation).</p><p id="r-2235405" data-claire-element-id="2512289">Voilà pour ce tour d'horizon des tests unitaires. Là encore, si vous voulez en apprendre plus, rendez-vous sur <a href="https://docs.python.org/3/library/unittest.html">la documentation officielle du module unittest</a>.</p><h4 id="r-2235414" data-claire-element-id="30846643">En résumé</h4><ul id="r-2235413" data-claire-element-id="8728396"><li id="r-2235408" data-claire-element-id="2512292"><p id="r-2235407" data-claire-element-id="2512291">on peut tester nos applications grâce à plusieurs modules sous Python, les tests unitaires étant supportés par le module <em>unittest</em> ;</p></li><li id="r-2235410" data-claire-element-id="8728393"><p id="r-2235409" data-claire-element-id="8728392">pour créer un test unitaire, il faut créer une classe qui hérite de<code data-claire-semantic="text">unittest.TestCase</code>. Les méthodes de test ont un nom commençant par <em>test</em> ;</p></li><li id="r-2235412" data-claire-element-id="8728395"><p id="r-2235411" data-claire-element-id="8728394">La commande<code data-claire-semantic="text">python -m unittest</code>permet la découverte automatique des tests dans le répertoire courant.</p></li></ul><aside id="r-3848572" data-claire-element-id="30846642" data-claire-semantic="information"><p id="r-3848571" data-claire-element-id="30846641"><a href="mXmWyLBCHi8zQnTW6.html">Que pensez-vous de ce cours ?</a></p></aside>
+</div>
+<div class="js-courseSelementActions sideActions">
+<ul class="sideActions__container">
+<li>
+<a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip" href="#.html" data-tooltip="Copier le lien" data-tooltip-done="Lien copié !">
+#
+</a>
+</li>
+</ul>
+</div>
+</div>
+<nav id="course-pagination" class="course-pagination    clearfix">
+<a href="234698-gerez-les-reseaux.html" class="button button--secondary  course-pagination__btn course-pagination__btn--previous">
+<i class="icon-previous"></i>
+<span>Gérez les réseaux</span>
+</a>
+<span class="course-pagination__separator"></span>
+<a href="2235545-faites-de-la-programmation-parallele-avec-threading.html" class="button button--secondary  course-pagination__btn course-pagination__btn--next">
+<span>Faites de la programmation parallèle avec threading</span>
+<i class="icon-next"></i>
+</a>
+</nav>
+<div tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="popin-view-restriction_popin_title" class="popin popin--illustrated  js-popin" id="popin-view-restriction">
+<button class="popin__close-button  js-close-button" title="Fermer" aria-label="Fermer">
+<i class="icon-close" aria-hidden="true"></i>
+</button>
+<div class="popin__inner">
+<div class="popin__illustrationWrapper">
+<div class="popin__illustration illustration--balloon"></div>
+</div>
+<div class="popin__mainContainer">
+<div class="popin__gigTitleContainer js-popin-title">
+<div class="gigWorkersPopin__timeline">
+<div class="gigWorkersPopin__dot">1</div>
+<div class="gigWorkersPopin__line"></div>
+<div class="gigWorkersPopin__dot gigWorkersPopin__dot--disabled">2</div>
+</div>
+<div class="popin__title">Créez un compte <br /> OpenClassrooms</div>
+</div>
+<div id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</div>
+<div class="popin__content  js-popin-content">
+<div class="popin__contentWrapper">
+<p>
+Très heureux de voir que nos cours vous plaisent, déjà 5 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+</p>
+<p>
+Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres membres.
+</p>
+</div>
+</div>
+<div class="popin__actions  js-popin-actions">
+<span class="u--inlineBlock">
+<a class="button button--primary " href="register.html">S'inscrire</a>
+</span>
+<span class="u--inlineBlock">
+<a class="button button--secondary " href="login.html">Se connecter</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div id="popin-not-certifying-yet_134730" class="popin" data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <span><i class='icon-star'></i> Devenez Premium</span>
+                    ">
+<img alt="Exemple de certificat de réussite" src="2235416-creez-des-tests-unitaires-avec-unittest//static.oc-static.com/prod/images/courses/certif.jpg" />
+</div>
+<div id="popin-not-certifying-yet_58669" class="popin" data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <span><i class='icon-star'></i> Devenez Premium</span>
+                    ">
+<img alt="Exemple de certificat de réussite" src="2235416-creez-des-tests-unitaires-avec-unittest//static.oc-static.com/prod/images/courses/certif.jpg" />
+</div>
+</div>
+<aside id="content-with-sidebar" class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement">
+<nav class="col-nav">
+<div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+<div class="col-nav__block  col-nav__block--summary">
+<div class="side-paginate">
+<a href="234698-gerez-les-reseaux.html" class="side-paginate__previous" title="Chapitre précédent">
+<i class="icon-previous"></i>
+</a>
+<span class="side-paginate__separator"></span>
+<h6 class="side-paginate__title">
+Appréhendez les merveilles de la bibliothèque standard
+</h6>
+<span class="side-paginate__separator"></span>
+<a href="2235545-faites-de-la-programmation-parallele-avec-threading.html" class="side-paginate__next" title="Chapitre suivant">
+<i class="icon-next"></i>
+</a>
+</div>
+<div class="col-nav__block--summary-list">
+<ol class="col-nav__chapters">
+<li class="">
+<a class="col-nav__chapterTitle" href="233857-manipulez-les-expressions-regulieres.html">Manipulez les expressions régulières</a>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="234041-exprimez-le-temps.html">Exprimez le temps</a>
+ </li>
+<li class="">
+<a class="col-nav__chapterTitle" href="234239-faites-de-la-programmation-systeme.html">Faites de la programmation système</a>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="234357-utilisez-des-modules-de-mathematiques.html">Utilisez des modules de mathématiques</a>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="234500-gerez-les-mots-de-passe.html">Gérez les mots de passe</a>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="234698-gerez-les-reseaux.html">Gérez les réseaux</a>
+</li>
+<li class="selected">
+<span class="col-nav__chapterTitle">Créez des tests unitaires avec unittest</span>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="2235545-faites-de-la-programmation-parallele-avec-threading.html">Faites de la programmation parallèle avec threading</a>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="234859-creez-des-interfaces-graphiques-avec-tkinter.html">Créez des interfaces graphiques avec Tkinter</a>
+</li>
+</ol>
+</div>
+</div>
+<div class="col-nav__block col-nav__block--button">
+<a href="langage-python.html" class="button button--secondary">
+Accéder au forum
+</a>
+</div>
+<div class="col-nav__block col-nav__block--institution">
+<div class="col-nav__title">Créé par</div>
+<a href="openclassrooms.html" target="_blank" rel="nofollow">
+<span data-image-cdn-attr-src="2235416-creez-des-tests-unitaires-avec-unittesthttps://course.oc-static.com/partners/19/15433053814225_short-200x200.png" data-image-cdn-attr-alt="logo OpenClassrooms" data-image-cdn-width="165" data-image-cdn-attr-class="col-nav__institutionLogo"><img class="col-nav__institutionLogo" width="165" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></span>
+<p class="col-nav__block--institutionDescription">
+OpenClassrooms, Leading <span class='nowrap'>E-Learning<span> Platform in Europe
+</p>
+</a>
+</div>
+<div class="col-nav__block col-nav__block--institution">
+<div class="col-nav__title">Avec le soutien de</div>
+<a href="intech.html" target="_blank">
+<span data-image-cdn-attr-src="2235416-creez-des-tests-unitaires-avec-unittesthttps://course.oc-static.com/partners/7/15804863695308_logo%20vert%20baseline.png" data-image-cdn-attr-alt="logo IN&#039;TECH" data-image-cdn-width="165" data-image-cdn-attr-class="col-nav__institutionLogo"><img class="col-nav__institutionLogo" width="165" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></span>
+<p class="col-nav__block--institutionDescription">
+Devenez expert en ingénierie informatique
+</p>
+</a>
+</div>
+<div class="socialNetwork col-nav__block">
+<ul class="socialButtons  js-socialButtons" data-options="
+                title: 'Créez des tests unitaires avec unittest @OCFrance',
+        mailTitle: 'Cours &quot;Créez des tests unitaires avec unittest&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;Créez des tests unitaires avec unittest&quot; sur OpenClassrooms.'">
+<li>
+<a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter">
+<i class="roundIcon__icon  icon-twitter"></i>
+</a>
+</li>
+<li>
+<a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+<i class="roundIcon__icon  icon-facebook"></i>
+</a>
+</li>
+<li>
+<a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+<i class="roundIcon__icon  icon-letter"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</aside>
+</div>
+</div>
+</div>
+<footer id="course-footer" class="alt-section noMarginBottom">
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content  courseFooter">
+<div class="courseFooter__authors course-bottom__category">
+<div class="course-bottom__title">
+Le professeur
+</div>
+<div>
+<a itemprop="author" itemscope itemtype="http://schema.org/Person" href="prolixe-27218.html" class="no-underlined" rel="nofollow">
+<div class="course-bottom__text-illustrated">
+<span data-author="Vincent Le Goff" data-image-cdn-background-image="https://openclassrooms.com/bundles/common/images/avatar_defaut.png" data-image-cdn-width="120"></span>
+<div class="course-bottom__subtitle" itemprop="name">Vincent Le Goff</div>
+</div>
+</a>
+</div>
+</div>
+<div class="courseFooter__courseFormat course-bottom__category">
+<h2>Découvrez aussi ce cours en...</h2>
+<ul class="course-bottom__format">
+<li>
+<a href="apprenez-a-programmer-en-python-9791090085770?societe=openclassrooms.html" target="_blank" class="text-decoration-none">
+<div class="circle circle--x-small">
+<span class="circle__content"></span>
+<i class="icon-book"></i>
+</div>
+<div class="course-bottom__format-entitled">
+Livre
+</div>
+</a>
+</li>
+<li>
+<a href="old-courses-pdf.html" class="text-decoration-none">
+<div class="circle circle--x-small">
+<span class="circle__content"></span>
+<i class="icon-pdf"></i>
+</div>
+<div class="course-bottom__format-entitled">
+PDF
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</article>
+</main>
+</div>
+<div id="mainSearchLegacy" class="mainSearch"></div>
+<div id="footerWrapper">
+<footer id="footer" class="oc-footerSkeleton">
+<hr style="margin-bottom: 8px" />
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="oc-footerSkeleton__container">
+<div class="oc-footerSkeleton__item">
+<div class="oc-footerSkeleton__itemTitle"><span class="skeleton" style="height: 20px; width: 80%"></span></div>
+<ul class="oc-footerSkeleton__linksList">
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 70%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 60%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 65%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+</ul>
+</div>
+<div class="oc-footerSkeleton__item">
+<div class="oc-footerSkeleton__itemTitle"><span class="skeleton" style="height: 20px; width: 85%"></span></div>
+<ul class="oc-footerSkeleton__linksList">
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 60%"></span></a></p>
+</li>
+</ul>
+</div>
+<div class="oc-footerSkeleton__item">
+<div class="oc-footerSkeleton__itemTitle"><span class="skeleton" style="height: 20px; width: 75%"></span></div>
+<ul class="oc-footerSkeleton__linksList">
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 65%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 50%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+</ul>
+</div>
+<div class="oc-footerSkeleton__item">
+<span class="skeleton" style="height: 25px; width: 65%"></span>
+<div class="oc-footerSkeleton__socialButtonWrapper">
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+</div>
+<div><span class="skeleton skeleton--width50" style="height: 40px;"></span></div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div id="showDisclaimer" class="cookiesDisclaimer"></div>
+<script type="text/javascript">
+        function getConsentedSegmentIntegrations() {
+            // getCookie from https://www.w3schools.com/js/js_cookies.asp
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) === ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) === 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            var consent = getCookie('cmapi_cookie_privacy');
+
+            function isCookieAllowedByConsent(consent, level) {
+              return !!consent && consent.search(level) !== -1;
+            }
+
+            var isFunctionalCookieAllowed = isCookieAllowedByConsent(consent, 2);
+            var isAdvertisingCookieAllowed = isCookieAllowedByConsent(consent, 3);
+
+            var isAppCuesPremiumUser = false;
+
+            var isOnPoleEmploiPage = !!window && window.location.pathname.includes('partners/pole-emploi/offers');
+
+            return {
+                Amplitude: isFunctionalCookieAllowed,
+                'Bing Ads': isAdvertisingCookieAllowed,
+                'Google Ads': isAdvertisingCookieAllowed,
+                'Google Analytics': isFunctionalCookieAllowed,
+                'Zendesk': isFunctionalCookieAllowed,
+                Appcues: (isAppCuesPremiumUser || isOnPoleEmploiPage) && isFunctionalCookieAllowed,
+            };
+        }
+
+        var consentedSegmentIntegrations = getConsentedSegmentIntegrations();
+
+        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="2235416-creez-des-tests-unitaires-avec-unittesthttps://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+            window.loadAnalytics = function () { window.analytics.load('mou95e6tdn', {integrations: consentedSegmentIntegrations}) };
+        }}();
+    </script>
+<script>
+  var isPrerender = !!navigator.userAgent.match(/github\.com\/prerender\/prerender/);
+  var preRenderBrowserFakeUa = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163 Safari/537.36";
+  var polyfillUrl = "https://cdn.polyfill.io/v3/polyfill.min.js?unknown=polyfill&features=default,es6,IntersectionObserver,Object.values,Array.prototype.includes,Array.prototype.findIndex,Promise.prototype.finally,fetch,Intl.~locale.fr";
+
+    if (isPrerender) {
+    polyfillUrl+= "&ua=" + encodeURIComponent(preRenderBrowserFakeUa);
+  }
+
+  App.scripts.push(polyfillUrl);;
+
+  App.script = {
+    DASHBOARD: 'dashboard',
+    MENTORSHIP_STUDENT_DASHBOARD: 'mentorshipStudentdashboard',
+    SHOP: 'shop',
+    PAYMENT: 'payment',
+    PROJECTS: 'projects',
+    TEAM: 'team',
+    HOME: 'home',
+    COURSE_EDIT: 'course_edit',
+    COURSE_VIEW: 'course_view',
+    ADMIN: 'admin',
+    ADMIN_STUDENT_CREDENTIAL_CREATE: 'adminStudentCredentialCreate',
+    POST_A_JOB: 'postAJob',
+    GIG_WORKERS: 'gigWorkers',
+    JOB_GUARANTEE: 'jobGuarantee',
+    JOB_SURVEY: 'jobSurvey',
+    MCQ_EDIT: 'mcqEdit',
+    MCQ_VIEW: 'mcqView',
+    MENTOR_EDIT: 'mentorEdit',
+    MENTORSHIP_DASHBOARD: 'mentorshipDashboard',
+    MENTORSHIP_SESSION_CREATE: 'mentorshipSessionCreate',
+    MENTORSHIP_SESSION_NON_ASSESSOR_CREATE: 'mentorshipSessionNonAssessorCreate',
+    PATHS: 'paths',
+    PRIVATE_CONVERSATIONS: 'privateConversations',
+    USER_PROFILE: 'userProfile',
+    WELCOME: 'welcome',
+    APPRENTICESHIP: 'apprenticeship',
+    WEBAPP: 'webapp',
+    PROJECTS_ADMIN: 'projectsAdmin',
+    SECURITY: 'security',
+  };
+</script>
+<script>App.scripts.push("/js/runtime.2b0db2a1a4f4ea6dcc32.js");</script>
+<script>App.scripts.push("/js/vendors.70ee40825d0836d87858.js");</script>
+<script>App.scripts.push("/js/oc/packages/main.0fcba3e3d846ab6f580c.js");</script>
+
+<script>App.scriptToLoad = App.script.COURSE_VIEW</script>
+
+<script>
+    (function () {
+        function loadScripts(cb) {
+            App.scripts.forEach(function (src, index) {
+                var script = document.createElement('script');
+                script.src = src;
+                script.async = false;
+                document.body.appendChild(script);
+
+                if (cb && index === App.scripts.length - 1) {
+                    script.onload = cb;
+                }
+            });
+        }
+
+        function boot() {
+            loadScripts(function () {
+                if (App.modules) {
+                    App.modules.startAll();
+                }
+            });
+        }
+
+        if (window.addEventListener) {
+            window.addEventListener('load', boot, false);
+        } else if (window.attachEvent) {
+            window.attachEvent('onload', boot);
+        } else {
+            window.onload = boot;
+        }
+    }());
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"90dc06697a","applicationID":"20302107","transactionName":"NANaYkJXC0ICAhdYVw1Je0NDQgpcTA4AblsPB1FEVWkGXhYTEFRnEwdKQm9GBEMXPhVYXRQ=","queueTime":0,"applicationTime":263,"atts":"GERZFApNGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
