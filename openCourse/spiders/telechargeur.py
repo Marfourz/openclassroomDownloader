@@ -5,20 +5,28 @@ import re
 
 class Telechargeur(scrapy.Spider):
     name = 'Telechargeur'
+
     def start_requests(self):
-        urls = ["https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python.html"]
+        os.system("clear")
+        url = input("Entrer l'url : ")
+
+        while not url.startswith("https://openclassrooms.com"):
+            print("Erreur:  Url invalide.Vérifier qu'il s'agit d'un url de OC\n")
+            url = input("Réessayer : ")
+            print(url)
+        urls = [url]
         for url in urls:
+            print("C'est parti !!!!!")
             yield scrapy.Request(url = url, callback = self.parse)
     
     def parse(self,response):
-        yield scrapy.Request(url = response.url, callback = self.creatorDir)
+        yield scrapy.Request(url = response.url, callback = self.creatorDir ,dont_filter = True)
         for url in response.css("li.course-part-summary__item h4 a::attr(href)").getall():
             url = response.urljoin(url)
             yield scrapy.Request(url = url, callback = self.creatorDir)
     
 
     def creatorDir(self,response):
-        print("salut me voici " + response.url)
         page = response.url.split("/")[-1] + "-inter" + ".html"
         filename = page
         with open(filename, 'wb') as f:
